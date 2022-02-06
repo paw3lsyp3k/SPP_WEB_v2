@@ -169,11 +169,14 @@ body{
 
 .standOut-wrapper{
     width: 100%;
-    padding: 4vmax 0;
-    background-color: darkgray;
+    padding: 7vmax 0;
+    background-image: url(../assets/images/bg2.png);
+    background-position: bottom;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: violet;
         .boxes{
             width: 100%;
             padding: 0 10%;
@@ -181,9 +184,180 @@ body{
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 5%;
             .standOut-box{
-                width: 100%;
-                height: 350px;
-                background-color: darkmagenta;
+                width: 90%;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                padding: 2vmax 0;
+                box-shadow: -1px 1px 25px -15px rgba(0, 0, 0, 1);
+                border-radius: 20px;
+                .standOut-icon{
+                    width: 6vmax;
+                    height: 6vmax;
+                    background-position: center;
+                    background-size: cover;
+                }
+                .so-box-icon1{
+                    background-image: url(../assets/icons/standout-icon1.svg);
+                }
+                .so-box-icon2{
+                    background-image: url(../assets/icons/standout-icon2.svg);
+                }
+                .so-box-icon3{
+                    background-image: url(../assets/icons/standout-icon3.svg);
+                }
+                .so-box-icon4{
+                    background-image: url(../assets/icons/standout-icon4.svg);
+                }
+
+                .standOut-title{
+                    color: $main-color;
+                    font-size: 1.6vmax;
+                    margin: 1.5vmax 0 1vmax 0;
+                    font-weight: 500;
+                    
+                }
+                .standOut-description{
+                    text-align: center;
+                    width: 95%;
+                    color: black;
+                    font-size: 0.9vmax;
+                    font-weight: 400;
+                }
             }  
         }
+}
+
+.websites-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/images/bg3.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+    .websites-text{
+        width: 40%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+            font-size: 3vmax;
+            font-weight: 600;
+            a{
+                color: $main-color;
+            }
+        }
+        p{
+            width: 85%;
+            margin: 2vmax auto;
+            font-size: 1.2vmax;
+            line-height: 1.5vmax;
+            a{
+                color: $main-color;
+            }
+        }
+        .websites-button{
+            position: relative;
+            margin-top: 2vmax;
+            padding: 1.3vmax 2vmax;
+            background-color: $white;  
+            transition: 350ms ease-in-out;
+            cursor: pointer;
+            transform: skewX(-8deg);
+            p{
+                width: 100%;
+                margin: 0;
+                color: $main-color;
+                font-size: 1.2vmax;
+                font-weight: 500;
+                transition: 350ms ease-in-out;
+            }
+        }
+        .websites-button:hover{
+            background-color: $main-color;
+            p{
+                color: $white;
+            }
+            &::after,
+            &::before{
+                display: none;
+            }
+        }
+        .websites-button::after{
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 55%;
+            border-top: 4px solid $main-color;
+            border-left: 4px solid $main-color;
+            transition:350ms ease-in-out;
+        }
+        .websites-button::before{
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 55%;
+            border-bottom: 4px solid $main-color;
+            border-right: 4px solid $main-color;
+            transition: 350ms ease-in-out;
+        }  
+    }
+    .websites-container{
+        width: 30vmax;
+        height: 30vmax;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2vmax;
+        .websites-box{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+            padding: 1vmax 0;
+            background-color: $white;
+            box-shadow: -1px 1px 25px -15px rgba(0, 0, 0, 1);
+            border-radius: 20px;
+            .websites-icon{
+                width: 4vmax;
+                height: 4vmax;
+                background-position: center;
+                background-size: cover;
+            }
+            .web-box-icon1{
+                background-image: url(../assets/icons/websites-icon1.svg);
+            }
+            .web-box-icon2{
+                background-image: url(../assets/icons/websites-icon2.svg);
+            }
+            .web-box-icon3{
+                background-image: url(../assets/icons/websites-icon3.svg);
+            }
+            .web-box-icon4{
+                background-image: url(../assets/icons/websites-icon4.svg);
+            }
+            .websites-title{
+                font-size: 1.2vmax;
+                font-weight: 500;
+                color: $main-color;
+            }
+            .websites-description {
+                font-size: 0.8vmax;
+                width: 85%;
+            }
+        }
+    }
 }
