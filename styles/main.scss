@@ -269,7 +269,6 @@ body{
             background-color: $white;  
             transition: 350ms ease-in-out;
             cursor: pointer;
-            transform: skewX(-8deg);
             p{
                 width: 100%;
                 margin: 0;
@@ -359,5 +358,99 @@ body{
                 width: 85%;
             }
         }
+    }
+}
+
+.about-colaboration-wrapper{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/images/bg4.png);
+    background-position: top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .colaboration-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            font-weight: 500;
+            font-size: 2vmax;
+            a{
+                color: $main-color;
+            }
+        }
+        .colaboration-dropdown{
+            width: 30vmax;
+            margin-top: 3vmax;
+            .dropdown-item{
+                margin: 0.7vmax 0;
+                padding: 0.5vmax 2vmax;
+                background-color: $white;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                box-shadow: -1px 1px 25px -15px rgba(0, 0, 0, 1);
+                cursor: pointer;
+                .dropdown-item-section{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h3{
+                        font-weight: 500;
+                        font-size: 1.4vmax;
+                        color: $main-color;
+                    }
+                    .dropdown-title{
+                        color: black;
+                        font-size: 1.2vmax;  
+                        font-weight: 400; 
+                    }
+                    .dropdown-icon{
+                        width: 1.5vmax;
+                        height: 1.5vmax;
+                        background-image: url(../assets/icons/arrow-icon.svg);
+                        background-position: center;
+                        background-size: cover;
+                        transition: 200ms ease;
+                    }
+                }
+                .dropdown-description{
+                    width: 100%;
+                    height: 0;
+                    transform:scaleY(0);
+                    transform-origin:top;
+                    text-align: center;    
+                    padding: 0;
+                    transition: 200ms ease;
+                    p{
+                        font-weight: 400;
+                        font-size: 0.9vmax;
+                    }
+                }
+            }
+            .active{
+                .dropdown-icon{
+                    transform: rotate(180deg);
+                }
+                .dropdown-description{
+                    padding: 1.5vmax 1vmax;
+                    height: auto;
+                    transform:scaleY(1);
+                    transition: 200ms ease;
+                }
+            }
+        }
+    }
+    .colaboration-photo{
+        width: 25vmax;
+        height: 30vmax;
+        background-image: url(../assets/images/photo2.jpg);
+        background-position: center;
+        background-size: cover;
+        border-radius: 25%;
     }
 }

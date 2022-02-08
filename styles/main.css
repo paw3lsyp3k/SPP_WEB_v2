@@ -354,8 +354,6 @@ body {
   -webkit-transition: 350ms ease-in-out;
   transition: 350ms ease-in-out;
   cursor: pointer;
-  -webkit-transform: skewX(-8deg);
-          transform: skewX(-8deg);
 }
 
 .websites-wrapper .websites-text .websites-button p {
@@ -472,5 +470,146 @@ body {
 .websites-wrapper .websites-container .websites-box .websites-description {
   font-size: 0.8vmax;
   width: 85%;
+}
+
+.about-colaboration-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/images/bg4.png);
+  background-position: top;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.about-colaboration-wrapper .colaboration-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-colaboration-wrapper .colaboration-content h2 {
+  font-weight: 500;
+  font-size: 2vmax;
+}
+
+.about-colaboration-wrapper .colaboration-content h2 a {
+  color: #27AE60;
+}
+
+.about-colaboration-wrapper .colaboration-content .colaboration-dropdown {
+  width: 30vmax;
+  margin-top: 3vmax;
+}
+
+.about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item {
+  margin: 0.7vmax 0;
+  padding: 0.5vmax 2vmax;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: -1px 1px 25px -15px black;
+          box-shadow: -1px 1px 25px -15px black;
+  cursor: pointer;
+}
+
+.about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-item-section {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-item-section h3 {
+  font-weight: 500;
+  font-size: 1.4vmax;
+  color: #27AE60;
+}
+
+.about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-item-section .dropdown-title {
+  color: black;
+  font-size: 1.2vmax;
+  font-weight: 400;
+}
+
+.about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-item-section .dropdown-icon {
+  width: 1.5vmax;
+  height: 1.5vmax;
+  background-image: url(../assets/icons/arrow-icon.svg);
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-description {
+  width: 100%;
+  height: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  text-align: center;
+  padding: 0;
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-description p {
+  font-weight: 400;
+  font-size: 0.9vmax;
+}
+
+.about-colaboration-wrapper .colaboration-content .colaboration-dropdown .active .dropdown-icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.about-colaboration-wrapper .colaboration-content .colaboration-dropdown .active .dropdown-description {
+  padding: 1.5vmax 1vmax;
+  height: auto;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition: 200ms ease;
+  transition: 200ms ease;
+}
+
+.about-colaboration-wrapper .colaboration-photo {
+  width: 25vmax;
+  height: 30vmax;
+  background-image: url(../assets/images/photo2.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 25%;
 }
 /*# sourceMappingURL=main.css.map */
