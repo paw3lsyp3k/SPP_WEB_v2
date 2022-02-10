@@ -150,7 +150,7 @@ body{
         margin-right: 5%;
         text-align: center;
         h1{
-            font-size: 2.3vmax;
+            font-size: 2.4vmax;
             font-weight: 500;
             a{
                 color: $main-color;
@@ -232,7 +232,7 @@ body{
 
 .websites-wrapper{
     width: 100%;
-    height: 100vh;
+   padding: 8vmax 0;
     background-image: url(../assets/images/bg3.png);
     background-position: center;
     background-size: cover;
@@ -364,6 +364,7 @@ body{
 .about-colaboration-wrapper{
     width: 100%;
     height: 100vh;
+    max-height: 100vh;
     background-image: url(../assets/images/bg4.png);
     background-position: top;
     background-size: cover;
@@ -433,6 +434,9 @@ body{
                 }
             }
             .active{
+                .dropdown-item-section{
+                    border-bottom: 2px solid $main-color;
+                }
                 .dropdown-icon{
                     transform: rotate(180deg);
                 }
@@ -453,4 +457,190 @@ body{
         background-size: cover;
         border-radius: 25%;
     }
+}
+
+.portfolio-wrapper{
+    width: 100%;
+    padding: 0 0 10vmax 0;
+    background-image: url(../assets/images/bg5.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    h2{
+        font-size: 2.4vmax;
+        font-weight: 500;
+        a{
+            color: $main-color;
+        }
+    }
+    .portfolio-container{
+        width: 80%;
+        margin-top: 5vmax;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4vmax;
+        .portfolio-item{
+            width: 100%;
+            background-color: $white;
+            display: flex;
+            border-radius: 20px;
+            box-shadow: -1px 1px 25px -15px rgba(0, 0, 0, 1);
+            .portfolio-content{
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: space-around;
+                h3{
+                    font-size: 1.4vmax;
+                    font-weight: 500;
+                    color: $main-color;
+                    margin-top: 2vmax;
+                }
+                p{
+                    width: 80%;
+                    font-weight: 300;
+                    font-size: 0.9vmax;
+                    margin-top: 2vmax;
+                }
+                .portfolio-content-button{
+                    width: 100%;
+                    font-size: 1vmax;
+                    padding: 0.5vmax 0;
+                    margin-top: 3vmax;
+                    background-color: $main-color;
+                    color: $white;
+                    border-bottom-left-radius: 20px;
+                    cursor: pointer;
+                }
+            }
+            .portfolio-photo{
+                width: 50%;
+                height: 100%;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                background-color: brown;
+            }
+        }
+    }
+}
+
+.contact-wrapper{
+    width: 100%;
+    background-color: rgb(30,30,30);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 3vmax;
+    .contact-title{
+        padding: 1vmax 5vmax ;
+        background-color: $main-color;
+        color: $white;
+        font-size: 2.4vmax;
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 200px;
+        margin-top: 5vmax;
+    }
+    .contact-container{
+        width: 80%;
+        margin: 4vmax auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .contact-form-container{
+            width: 45%;
+            .contact-form{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(6, 1fr);
+                grid-gap: 2vmax;
+                .form-field{
+                    border: none;
+                    outline: none;
+                    font-size: 1vmax;
+                    padding: 0.5vmax 1vmax;
+                }
+                .email-field{
+                    grid-row: 2/3;
+                    grid-column: 1/3;
+                }
+                .msg-field{
+                    grid-row: 3/6;
+                    grid-column: 1/3;
+                    resize: none;
+                }
+                .form-button{
+                    background-color: $main-color;
+                    color: $white;
+                    grid-column: 2/3;
+                    display: grid;
+                    align-items: center;
+                    margin-left: auto;
+                    border: none;
+                    font-size: 1vmax;
+                    padding: 1vmax 3vmax;
+                    cursor: pointer;
+                }
+            }
+        }
+        .contact-spacer{
+            width: 4px;
+            height: 30vmax;
+            margin-top: -5vmax;
+            background-color: $white;
+        }
+        .contact-socials{
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .socials{
+                background-color: $white;
+                margin: 1vmax;
+                padding: 1vmax 3vmax;
+                font-size: 1.2vmax;
+                color: black;
+                cursor: pointer;
+            }
+            .mail{
+                border-left: 20px solid $main-color;
+                cursor: auto;
+                a{
+                    color: $main-color;
+                }
+            }
+            
+            .facebook{
+                border-left: 20px solid #3b5998;
+                transition: 250ms ease-in;
+                &:hover{
+                    color: $white;
+                    background-color: #3b5998;
+                }
+            }
+            .instagram{
+                border-left: 20px solid #C13584;
+                transition: 250ms ease-in;
+                &:hover{
+                    color: $white;
+                    background-color: #C13584;
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    padding: 0.5vmax 0;
+    color: $white;
+    background-color: $main-color;
+    letter-spacing: 0.5vmax;
+    text-align: center;
 }
