@@ -149,6 +149,10 @@ body{
         width: 35%;
         margin-right: 5%;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
         h1{
             font-size: 2.4vmax;
             font-weight: 500;
@@ -163,6 +167,56 @@ body{
                 color: $main-color;
                 font-weight: 500;
             }
+        }
+        .aboutMe-content-button{
+            position: relative;
+            margin-top: 3vmax;
+            padding: 1.3vmax 2vmax;
+            background-color: $white;  
+            transition: 350ms ease-in-out;
+            cursor: pointer;
+            p{
+                width: 100%;
+                margin: 0;
+                color: $main-color;
+                font-size: 1.2vmax;
+                font-weight: 500;
+                transition: 350ms ease-in-out;
+            }
+        }
+        .aboutMe-content-button:hover{
+            background-color: $main-color;
+            p{
+                color: $white;
+            }
+            &::after,
+            &::before{
+                display: none;
+            }
+        }
+        .aboutMe-content-button::after{
+            content: '';
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 60%;
+            height: 55%;
+            border-top: 4px solid $main-color;
+            border-left: 4px solid $main-color;
+            transition:350ms ease-in-out;
+        }
+        .aboutMe-content-button::before{
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: 0;
+            right: 0;
+            width: 60%;
+            height: 55%;
+            border-bottom: 4px solid $main-color;
+            border-right: 4px solid $main-color;
+            transition: 350ms ease-in-out;
         }
     }
 }

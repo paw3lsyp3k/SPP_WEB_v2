@@ -184,6 +184,16 @@ body {
   width: 35%;
   margin-right: 5%;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .aboutMe-wrapper .aboutMe-content h1 {
@@ -203,6 +213,66 @@ body {
 .aboutMe-wrapper .aboutMe-content h3 a {
   color: #27AE60;
   font-weight: 500;
+}
+
+.aboutMe-wrapper .aboutMe-content .aboutMe-content-button {
+  position: relative;
+  margin-top: 3vmax;
+  padding: 1.3vmax 2vmax;
+  background-color: #fafafa;
+  -webkit-transition: 350ms ease-in-out;
+  transition: 350ms ease-in-out;
+  cursor: pointer;
+}
+
+.aboutMe-wrapper .aboutMe-content .aboutMe-content-button p {
+  width: 100%;
+  margin: 0;
+  color: #27AE60;
+  font-size: 1.2vmax;
+  font-weight: 500;
+  -webkit-transition: 350ms ease-in-out;
+  transition: 350ms ease-in-out;
+}
+
+.aboutMe-wrapper .aboutMe-content .aboutMe-content-button:hover {
+  background-color: #27AE60;
+}
+
+.aboutMe-wrapper .aboutMe-content .aboutMe-content-button:hover p {
+  color: #fafafa;
+}
+
+.aboutMe-wrapper .aboutMe-content .aboutMe-content-button:hover::after, .aboutMe-wrapper .aboutMe-content .aboutMe-content-button:hover::before {
+  display: none;
+}
+
+.aboutMe-wrapper .aboutMe-content .aboutMe-content-button::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 55%;
+  border-top: 4px solid #27AE60;
+  border-left: 4px solid #27AE60;
+  -webkit-transition: 350ms ease-in-out;
+  transition: 350ms ease-in-out;
+}
+
+.aboutMe-wrapper .aboutMe-content .aboutMe-content-button::before {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  height: 55%;
+  border-bottom: 4px solid #27AE60;
+  border-right: 4px solid #27AE60;
+  -webkit-transition: 350ms ease-in-out;
+  transition: 350ms ease-in-out;
 }
 
 .standOut-wrapper {
