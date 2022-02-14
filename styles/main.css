@@ -11,15 +11,6 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-@-webkit-keyframes swing {
-  20% {
-    background-color: darkmagenta;
-  }
-  100% {
-    background-color: darkolivegreen;
-  }
-}
-
 .landing-wrapper {
   width: 100%;
   height: 100vh;
