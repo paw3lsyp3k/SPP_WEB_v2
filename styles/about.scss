@@ -32,9 +32,10 @@ body{
             background-color: black;
             margin: 3vmax 0;
             padding: 0.5vmax 5% 0.5vmax 15%;
-            display: flex;
+            border: 2px solid black;
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
+            transition: 250ms ease;
             .goBackIcon{
                 width: 1.5vmax;
                 height: 1.5vmax;
@@ -44,13 +45,27 @@ body{
                 background-size: cover;
                 filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
                 cursor: pointer;
+                text-decoration: none;
             }
-            p{
-                margin-left: 1vmax;
-                font-size: 1.2vmax;
-                color: $white;
-                cursor: pointer;
+            a{
+                text-decoration: none;
+                border: none;
+                display: flex;
+                p{
+                    margin-left: 1vmax;
+                    font-size: 1.2vmax;
+                    color: $white;
+                    cursor: pointer;
+                    transition: 250ms ease;
+                }
             }
+                &:hover{
+                    background-color: $main-color;
+                    border: 2px solid $main-color;
+                    p{
+                        margin-left: 2vmax;
+                    }
+                }
         }
     }
     .text-container{
@@ -60,8 +75,8 @@ body{
         display: flex;
         justify-content: center;
         .content{
-            width: 70%;
-            height: 140%;
+            width: 60%;
+            height: 175%;
             display: flex;
             flex-direction: column;
             align-items:  center;
@@ -74,6 +89,11 @@ body{
                 margin: 1vmax 0;
                 text-align: center;
                 font-size: 1.1vmax;
+                line-height: 1.5vmax;
+                font-weight: 400;
+                a{
+                    color: $main-color;
+                }
             }
         }
         

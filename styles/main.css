@@ -216,7 +216,11 @@ body {
   cursor: pointer;
 }
 
-.aboutMe-wrapper .aboutMe-content .aboutMe-content-button p {
+.aboutMe-wrapper .aboutMe-content .aboutMe-content-button a {
+  text-decoration: none;
+}
+
+.aboutMe-wrapper .aboutMe-content .aboutMe-content-button a p {
   width: 100%;
   margin: 0;
   color: #27AE60;

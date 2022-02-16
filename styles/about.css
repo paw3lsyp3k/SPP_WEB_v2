@@ -40,11 +40,11 @@ body {
   background-color: black;
   margin: 3vmax 0;
   padding: 0.5vmax 5% 0.5vmax 15%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  border: 2px solid black;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
 }
 
 .wrapper .photo .goBackButton .goBackIcon {
@@ -58,13 +58,33 @@ body {
   -webkit-filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
           filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
   cursor: pointer;
+  text-decoration: none;
 }
 
-.wrapper .photo .goBackButton p {
+.wrapper .photo .goBackButton a {
+  text-decoration: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .photo .goBackButton a p {
   margin-left: 1vmax;
   font-size: 1.2vmax;
   color: #fafafa;
   cursor: pointer;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
+}
+
+.wrapper .photo .goBackButton:hover {
+  background-color: #27AE60;
+  border: 2px solid #27AE60;
+}
+
+.wrapper .photo .goBackButton:hover p {
+  margin-left: 2vmax;
 }
 
 .wrapper .text-container {
@@ -80,8 +100,8 @@ body {
 }
 
 .wrapper .text-container .content {
-  width: 70%;
-  height: 140%;
+  width: 60%;
+  height: 175%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -104,5 +124,11 @@ body {
   margin: 1vmax 0;
   text-align: center;
   font-size: 1.1vmax;
+  line-height: 1.5vmax;
+  font-weight: 400;
+}
+
+.wrapper .text-container .content p a {
+  color: #27AE60;
 }
 /*# sourceMappingURL=about.css.map */
