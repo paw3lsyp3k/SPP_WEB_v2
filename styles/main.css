@@ -285,7 +285,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: violet;
 }
 
 .standOut-wrapper .boxes {
@@ -421,7 +420,11 @@ body {
   cursor: pointer;
 }
 
-.websites-wrapper .websites-text .websites-button p {
+.websites-wrapper .websites-text .websites-button a {
+  text-decoration: none;
+}
+
+.websites-wrapper .websites-text .websites-button a p {
   width: 100%;
   margin: 0;
   color: #27AE60;

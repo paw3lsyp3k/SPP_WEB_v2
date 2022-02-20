@@ -18,6 +18,10 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -26,12 +30,57 @@ body {
           align-items: center;
 }
 
-.landing-wrapper #myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
+.landing-wrapper .goBackButton {
+  position: absolute;
+  top: 2vmax;
+  left: 0;
+  padding: 0.5vmax 1vmax 0.5vmax 2vmax;
+  border: 2px solid black;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
+  background-color: black;
+}
+
+.landing-wrapper .goBackButton .goBackIcon {
+  width: 1.5vmax;
+  height: 1.5vmax;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-image: url(../assets/icons/arrow-icon.svg);
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
+          filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.landing-wrapper .goBackButton a {
+  text-decoration: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.landing-wrapper .goBackButton a p {
+  margin-left: 1vmax;
+  font-size: 1.2vmax;
+  color: #fafafa;
+  cursor: pointer;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
+}
+
+.landing-wrapper .goBackButton:hover {
+  background-color: #27AE60;
+  border: 2px solid #27AE60;
+}
+
+.landing-wrapper .goBackButton:hover p {
+  margin-left: 2vmax;
 }
 
 .landing-wrapper h2 {
@@ -71,5 +120,207 @@ body {
   height: 1vmax;
   background-color: #27AE60;
   z-index: -1;
+}
+
+.landing-wrapper h3 {
+  margin-top: 3vmax;
+  width: 50%;
+  font-size: 1.2vmax;
+  font-weight: 300;
+  text-align: center;
+}
+
+.landing-wrapper .scroll {
+  position: absolute;
+  bottom: 4vmax;
+  width: 2vmax;
+  height: 2vmax;
+  background-image: url(../assets/icons/scroll-icon.svg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  -webkit-transition: 350ms ease;
+  transition: 350ms ease;
+}
+
+.landing-wrapper .scroll:hover {
+  bottom: 4.5vmax;
+}
+
+.standOut-wrapper {
+  width: 100%;
+  padding: 8vmax 0;
+  background-color: #27AE60;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.standOut-wrapper .boxes {
+  width: 100%;
+  padding: 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.standOut-wrapper .boxes .standOut-box {
+  width: 18%;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2vmax 0;
+  -webkit-box-shadow: -1px 1px 25px -15px black;
+          box-shadow: -1px 1px 25px -15px black;
+  border-radius: 20px;
+}
+
+.standOut-wrapper .boxes .standOut-box .standOut-icon {
+  width: 5vmax;
+  height: 5vmax;
+  background-position: center;
+  background-size: cover;
+}
+
+.standOut-wrapper .boxes .standOut-box .so-box-icon1 {
+  background-image: url(../assets/icons/websites-icon1.svg);
+}
+
+.standOut-wrapper .boxes .standOut-box .so-box-icon2 {
+  background-image: url(../assets/icons/websites-icon2.svg);
+}
+
+.standOut-wrapper .boxes .standOut-box .so-box-icon3 {
+  background-image: url(../assets/icons/websites-icon3.svg);
+}
+
+.standOut-wrapper .boxes .standOut-box .so-box-icon4 {
+  background-image: url(../assets/icons/websites-icon4.svg);
+}
+
+.standOut-wrapper .boxes .standOut-box .standOut-title {
+  color: #27AE60;
+  font-size: 1.5vmax;
+  margin: 1.5vmax 0 1vmax 0;
+  font-weight: 500;
+}
+
+.standOut-wrapper .boxes .standOut-box .standOut-description {
+  text-align: center;
+  width: 90%;
+  color: black;
+  font-size: 0.9vmax;
+  font-weight: 400;
+}
+
+.description1-wrapper {
+  width: 100vw;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 7% 0;
+}
+
+.description1-wrapper .description1-image {
+  width: 30vmax;
+  height: 30vmax;
+  background-image: url(../assets/icons/ilustration1.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+.description1-wrapper .description1-content {
+  width: 40%;
+}
+
+.description1-wrapper .description1-content h2 {
+  font-weight: 500;
+  font-size: 2vmax;
+  color: #27AE60;
+}
+
+.description1-wrapper .description1-content ul {
+  margin-top: 4vmax;
+  list-style: none;
+  /* Remove default bullets */
+}
+
+.description1-wrapper .description1-content li {
+  margin-top: 1.2vmax;
+  font-size: 1.2vmax;
+}
+
+.description1-wrapper .description1-content li::before {
+  content: "\2022";
+  color: #27AE60;
+  font-weight: bold;
+  display: inline-block;
+  width: 1vmax;
+  margin-left: -1em;
+}
+
+.information-wrapper {
+  width: 100%;
+  background-color: #27AE60;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7% 0;
+  color: #fafafa;
+}
+
+.information-wrapper .information-content {
+  width: 40%;
+}
+
+.information-wrapper .information-content h2 {
+  font-weight: 600;
+  font-size: 2.6vmax;
+}
+
+.information-wrapper .information-content p {
+  margin-top: 4vmax;
+  font-weight: 500;
+  font-size: 1vmax;
+}
+
+.information-wrapper .information-image {
+  width: 30vmax;
+  height: 30vmax;
+  background-image: url(../assets/icons/ilustration2.svg);
+  background-position: center;
+  background-size: cover;
 }
 /*# sourceMappingURL=offer.css.map */

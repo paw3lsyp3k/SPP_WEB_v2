@@ -223,7 +223,6 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: violet;
         .boxes{
             width: 100%;
             padding: 0 10%;
@@ -316,13 +315,16 @@ body{
             background-color: $white;  
             transition: 350ms ease-in-out;
             cursor: pointer;
-            p{
-                width: 100%;
-                margin: 0;
-                color: $main-color;
-                font-size: 1.2vmax;
-                font-weight: 500;
-                transition: 350ms ease-in-out;
+            a{
+                text-decoration: none;
+                p{
+                    width: 100%;
+                    margin: 0;
+                    color: $main-color;
+                    font-size: 1.2vmax;
+                    font-weight: 500;
+                    transition: 350ms ease-in-out;
+                }
             }
         }
         .websites-button:hover{
