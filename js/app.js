@@ -11,3 +11,10 @@ items.forEach((e) => e.addEventListener("click", () => {
         e.classList.add("active");
     }   
 }));
+
+const contactSectionToShow = document.querySelector(".contact-wrapper");
+
+function showContactButton() {
+    contactSectionToShow.classList.add('active');
+    
+}
