@@ -14,18 +14,77 @@ body {
 .landing-wrapper {
   width: 100%;
   height: 100vh;
-  background-color: chartreuse;
 }
 
-.landing-wrapper nav {
+.landing-wrapper .navBar {
   width: 100%;
-  height: 8%;
-  background-color: darkkhaki;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #fafafa;
+}
+
+.landing-wrapper .navBar .navBarLogo {
+  font-size: 3vmax;
+  font-weight: 500;
+}
+
+.landing-wrapper .navBar .navBarLogo a {
+  color: #27AE60;
+}
+
+.landing-wrapper .navBar nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+}
+
+.landing-wrapper .navBar nav ul li {
+  margin: 0 1vmax;
+  font-size: 1.2vmax;
+  padding: 0.5vmax 1vmax;
+  cursor: pointer;
+  position: relative;
+}
+
+.landing-wrapper .navBar nav ul li::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 0px;
+  height: 2px;
+  background-color: #27AE60;
+  -webkit-transition: 350ms ease;
+  transition: 350ms ease;
+}
+
+.landing-wrapper .navBar nav ul .menu-about:hover::before,
+.landing-wrapper .navBar nav ul .menu-offer:hover::before,
+.landing-wrapper .navBar nav ul .menu-portfolio:hover::before,
+.landing-wrapper .navBar nav ul .menu-contact:hover::before {
+  width: 90%;
+}
+
+.landing-wrapper .navBar nav ul .menu-contact {
+  color: #27AE60;
 }
 
 .landing-wrapper .landing-contener {
   width: 100%;
-  height: 92%;
+  height: 90%;
   background-color: #fafafa;
   display: -webkit-box;
   display: -ms-flexbox;

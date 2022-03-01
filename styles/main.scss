@@ -19,15 +19,59 @@ body{
 .landing-wrapper{
     width: 100%;
     height: 100vh;
-    background-color: chartreuse;
-    nav{
+    .navBar{
         width: 100%;
-        height: 8%;
-        background-color: darkkhaki;
+        height: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $white;
+        .navBarLogo{
+            font-size: 3vmax;
+            font-weight: 500;
+            a{
+                color: #27AE60;
+            }
+        }
+        nav ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                list-style: none;
+                li{
+                    margin: 0 1vmax;
+                    font-size: 1.2vmax;
+                    padding: 0.5vmax 1vmax;
+                    cursor: pointer;
+                    position: relative;
+                    &::before{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        width: 0px;
+                        height: 2px;
+                        background-color: $main-color;
+                        transition: 350ms ease;
+                    }
+                    
+                }
+                .menu-about:hover,
+                .menu-offer:hover,
+                .menu-portfolio:hover,
+                .menu-contact:hover{
+                    &::before{
+                        width: 90%;
+                    }
+                }
+                .menu-contact{
+                    color: $main-color;
+                }
+            } 
     }
     .landing-contener {
         width: 100%;
-        height: 92%;
+        height: 90%;
         background-color: $white;
         display: flex;
         justify-content: space-around;
