@@ -1,5 +1,4 @@
 const items = document.querySelectorAll('.dropdown-item');
-const title = document.querySelector(".dropdown-title");
 
 
 
@@ -18,3 +17,4 @@ function showContactButton() {
     contactSectionToShow.classList.add('active');
     
 }
+

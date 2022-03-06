@@ -61,7 +61,7 @@ body{
                 .menu-portfolio:hover,
                 .menu-contact:hover{
                     &::before{
-                        width: 90%;
+                        width: 80%;
                     }
                 }
                 .menu-contact{
@@ -160,6 +160,30 @@ body{
             transform: skewX(-8deg);
         }
     }
+    .goUp-button{
+        width: 2vmax;
+        height: 2vmax;
+        background-color: $white;
+        border-radius: 50%;
+        padding: 0.5vmax;
+        position: fixed;
+        bottom: 3vmax;
+        right: 2vmax;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: -2px 2px 15px -5px rgba(0, 0, 0, 1);
+        cursor: pointer;
+        transition: 500ms ease;
+        &:hover{
+            transform: rotate(360deg);
+        }
+        img{
+            width: 60%;
+            height: 60%;
+            transform: rotate(180deg);
+        }
+    }
 }
 
 .aboutMe-wrapper{
@@ -202,15 +226,15 @@ body{
                 font-weight: 500;
             }
         }
-        .aboutMe-content-button{
-            position: relative;
-            margin-top: 3vmax;
-            padding: 1.3vmax 2vmax;
-            background-color: $white;  
-            transition: 350ms ease-in-out;
-            cursor: pointer;
             a{
                 text-decoration: none;
+                .aboutMe-content-button{
+                    position: relative;
+                    margin-top: 3vmax;
+                    padding: 1.3vmax 2vmax;
+                    background-color: $white;  
+                    transition: 350ms ease-in-out;
+                    cursor: pointer;
                 p{
                     width: 100%;
                     margin: 0;
@@ -352,15 +376,16 @@ body{
                 color: $main-color;
             }
         }
-        .websites-button{
-            position: relative;
-            margin-top: 2vmax;
-            padding: 1.3vmax 2vmax;
-            background-color: $white;  
-            transition: 350ms ease-in-out;
-            cursor: pointer;
+        
             a{
                 text-decoration: none;
+                .websites-button{
+                    position: relative;
+                    margin-top: 2vmax;
+                    padding: 1.3vmax 2vmax;
+                    background-color: $white;  
+                    transition: 350ms ease-in-out;
+                    cursor: pointer;
                 p{
                     width: 100%;
                     margin: 0;

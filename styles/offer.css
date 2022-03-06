@@ -147,6 +147,43 @@ body {
   bottom: 4.5vmax;
 }
 
+.landing-wrapper .goUp-button {
+  width: 2vmax;
+  height: 2vmax;
+  background-color: #fafafa;
+  border-radius: 50%;
+  padding: 0.5vmax;
+  position: fixed;
+  bottom: 3vmax;
+  right: 2vmax;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: -2px 2px 15px -5px black;
+          box-shadow: -2px 2px 15px -5px black;
+  cursor: pointer;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+.landing-wrapper .goUp-button:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.landing-wrapper .goUp-button img {
+  width: 60%;
+  height: 60%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .standOut-wrapper {
   width: 100%;
   padding: 8vmax 0;

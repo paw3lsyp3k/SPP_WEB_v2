@@ -120,7 +120,30 @@ body{
             bottom: 4.5vmax;
         }
     }
-    
+    .goUp-button{
+        width: 2vmax;
+        height: 2vmax;
+        background-color: $white;
+        border-radius: 50%;
+        padding: 0.5vmax;
+        position: fixed;
+        bottom: 3vmax;
+        right: 2vmax;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: -2px 2px 15px -5px rgba(0, 0, 0, 1);
+        cursor: pointer;
+        transition: 500ms ease;
+        &:hover{
+            transform: rotate(360deg);
+        }
+        img{
+            width: 60%;
+            height: 60%;
+            transform: rotate(180deg);
+        }
+    }
 }
 
 .standOut-wrapper{

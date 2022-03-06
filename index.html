@@ -38,6 +38,9 @@
             </div>
             <div class="landing-photo"></div>
         </div>
+        <div class="goUp-button">
+            <img src="./assets/icons/arrow-icon.svg" alt="">
+        </div>
     </div>
     <div class="aboutMe-wrapper">
         <div class="aboutMe-photo"></div>
@@ -52,9 +55,9 @@
                 
             <a>Pomożemy ci przenieść Twój biznes do internetu.<br>
             Bądź o krok przed konkurencją!</a></h3>
-            <div class="aboutMe-content-button">
-                <a href="about.html"><p>Zobacz więcej</p></a>
-            </div>
+            <a href="about.html"><div class="aboutMe-content-button" >
+                <p>Zobacz więcej</p>
+            </div></a>
         </div>
     </div>
     <div class="standOut-wrapper">
@@ -107,9 +110,9 @@
         </p>
             
 
-            <div class="websites-button">
-                <a href="./offer.html"><p>Zobacz więcej...</p></a>
-            </div>
+        <a href="./offer.html"><div class="websites-button">
+                <p>Zobacz więcej...</p>
+            </div></a>
         </div>
         <div class="websites-container">
             <div class="websites-box">
@@ -307,5 +310,38 @@
         Website created by SPP_WEB. All right reserved
     </div>
     <script src="./js/app.js"></script>
+    <script type="module" >
+        import jump from './node_modules/jump.js/dist/jump.module.js';
+
+        var button1 = document.querySelector('.landing-button');
+        button1.addEventListener('click', () => {
+            jump('.aboutMe-wrapper')
+        })
+
+        var button2 = document.querySelector('.menu-about');
+        button2.addEventListener('click', () => {
+            jump('.aboutMe-wrapper')
+        })
+
+        var button3 = document.querySelector('.menu-offer');
+        button3.addEventListener('click', () => {
+            jump('.websites-wrapper')
+        })
+
+        var button4 = document.querySelector('.menu-portfolio');
+        button4.addEventListener('click', () => {
+            jump('.portfolio-wrapper')
+        })
+
+        var button5 = document.querySelector('.menu-contact');
+        button5.addEventListener('click', () => {
+            jump('.contact-wrapper')
+        })
+
+        var button5 = document.querySelector('.goUp-button');
+        button5.addEventListener('click', () => {
+            jump('.landing-wrapper')
+        })
+    </script>
 </body>
 </html> 

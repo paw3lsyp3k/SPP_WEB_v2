@@ -131,4 +131,41 @@ body {
 .wrapper .text-container .content p a {
   color: #27AE60;
 }
+
+.wrapper .text-container .goUp-button {
+  width: 2vmax;
+  height: 2vmax;
+  background-color: #fafafa;
+  border-radius: 50%;
+  padding: 0.5vmax;
+  position: fixed;
+  bottom: 3vmax;
+  right: 2vmax;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: -2px 2px 15px -5px black;
+          box-shadow: -2px 2px 15px -5px black;
+  cursor: pointer;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+.wrapper .text-container .goUp-button:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.wrapper .text-container .goUp-button img {
+  width: 60%;
+  height: 60%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 /*# sourceMappingURL=about.css.map */

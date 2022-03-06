@@ -75,7 +75,7 @@ body {
 .landing-wrapper .navBar nav ul .menu-offer:hover::before,
 .landing-wrapper .navBar nav ul .menu-portfolio:hover::before,
 .landing-wrapper .navBar nav ul .menu-contact:hover::before {
-  width: 90%;
+  width: 80%;
 }
 
 .landing-wrapper .navBar nav ul .menu-contact {
@@ -205,6 +205,43 @@ body {
           transform: skewX(-8deg);
 }
 
+.landing-wrapper .goUp-button {
+  width: 2vmax;
+  height: 2vmax;
+  background-color: #fafafa;
+  border-radius: 50%;
+  padding: 0.5vmax;
+  position: fixed;
+  bottom: 3vmax;
+  right: 2vmax;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: -2px 2px 15px -5px black;
+          box-shadow: -2px 2px 15px -5px black;
+  cursor: pointer;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+
+.landing-wrapper .goUp-button:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.landing-wrapper .goUp-button img {
+  width: 60%;
+  height: 60%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 .aboutMe-wrapper {
   width: 100%;
   height: 100vh;
@@ -265,7 +302,11 @@ body {
   font-weight: 500;
 }
 
-.aboutMe-wrapper .aboutMe-content .aboutMe-content-button {
+.aboutMe-wrapper .aboutMe-content a {
+  text-decoration: none;
+}
+
+.aboutMe-wrapper .aboutMe-content a .aboutMe-content-button {
   position: relative;
   margin-top: 3vmax;
   padding: 1.3vmax 2vmax;
@@ -275,11 +316,7 @@ body {
   cursor: pointer;
 }
 
-.aboutMe-wrapper .aboutMe-content .aboutMe-content-button a {
-  text-decoration: none;
-}
-
-.aboutMe-wrapper .aboutMe-content .aboutMe-content-button a p {
+.aboutMe-wrapper .aboutMe-content a .aboutMe-content-button p {
   width: 100%;
   margin: 0;
   color: #27AE60;
@@ -469,7 +506,11 @@ body {
   color: #27AE60;
 }
 
-.websites-wrapper .websites-text .websites-button {
+.websites-wrapper .websites-text a {
+  text-decoration: none;
+}
+
+.websites-wrapper .websites-text a .websites-button {
   position: relative;
   margin-top: 2vmax;
   padding: 1.3vmax 2vmax;
@@ -479,11 +520,7 @@ body {
   cursor: pointer;
 }
 
-.websites-wrapper .websites-text .websites-button a {
-  text-decoration: none;
-}
-
-.websites-wrapper .websites-text .websites-button a p {
+.websites-wrapper .websites-text a .websites-button p {
   width: 100%;
   margin: 0;
   color: #27AE60;
