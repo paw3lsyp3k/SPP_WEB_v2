@@ -22,6 +22,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
     .goBackButton{
         position: absolute;
         top: 2vmax;
@@ -120,7 +121,7 @@ body{
             bottom: 4.5vmax;
         }
     }
-    .goUp-button{
+    #goUp-button{
         width: 2vmax;
         height: 2vmax;
         background-color: $white;
@@ -145,6 +146,7 @@ body{
         }
     }
 }
+
 
 .standOut-wrapper{
     width: 100%;

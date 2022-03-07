@@ -147,7 +147,7 @@ body {
   bottom: 4.5vmax;
 }
 
-.landing-wrapper .goUp-button {
+.landing-wrapper #goUp-button {
   width: 2vmax;
   height: 2vmax;
   background-color: #fafafa;
@@ -172,12 +172,12 @@ body {
   transition: 500ms ease;
 }
 
-.landing-wrapper .goUp-button:hover {
+.landing-wrapper #goUp-button:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.landing-wrapper .goUp-button img {
+.landing-wrapper #goUp-button img {
   width: 60%;
   height: 60%;
   -webkit-transform: rotate(180deg);

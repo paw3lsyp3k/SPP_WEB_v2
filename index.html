@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
     <div class="landing-wrapper">
         <div class="navBar">
             <div class="navBarLogo">
@@ -32,17 +36,17 @@
                     <a>swoim klientom</a> w internecie!<br>
                     Pomożemy Ci zaistnieć <a>ONLINE</a>!
                 </h2>
-                <div class="landing-button">
+                <div class="landing-button" id="trigger1">
                     <p>SPRAWDŹ!</p>
                 </div>
             </div>
             <div class="landing-photo"></div>
         </div>
-        <div class="goUp-button">
+        <div id="goUp-button">
             <img src="./assets/icons/arrow-icon.svg" alt="">
         </div>
     </div>
-    <div class="aboutMe-wrapper">
+    <div class="aboutMe-wrapper" >
         <div class="aboutMe-photo"></div>
         <div class="aboutMe-content">
             <h1>Kilka słów <a>o nas</a>...</h1><br><br>
@@ -146,6 +150,7 @@
         </div>
     </div>
     <div class="about-colaboration-wrapper">
+        <div class="colaboration-photo" id="mobile-photo"></div>
         <div class="colaboration-content">
             <h2>Jak będzie wyglądać <a>nasza współpraca</a>?</h2>
             <div class="colaboration-dropdown">
@@ -338,10 +343,11 @@
             jump('.contact-wrapper')
         })
 
-        var button5 = document.querySelector('.goUp-button');
+        var button5 = document.querySelector('#goUp-button');
         button5.addEventListener('click', () => {
             jump('.landing-wrapper')
         })
     </script>
+    
 </body>
 </html> 
