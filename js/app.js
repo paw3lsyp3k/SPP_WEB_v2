@@ -1,3 +1,23 @@
+/* Menu on mobile */ 
+
+const menuButton = document.querySelector('.menu-mobile-button');
+const menuContent = document.querySelector('.menu');
+const menuItems = document.querySelectorAll('.menu-item')
+
+const mobileMenu = () => {
+  menuButton.classList.toggle('btn-active')
+  menuContent.classList.toggle('menu-active')
+  menuItems.forEach(item => {
+    item.classList.toggle('item-active')
+  })
+}
+
+menuItems.forEach(item => {
+  item.addEventListener('click', () => {
+    mobileMenu();
+  })
+})
+
 /* Showing answers in about coop section  */
 
 const items = document.querySelectorAll('.dropdown-item');
