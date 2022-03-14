@@ -30,7 +30,7 @@ body{
         .navBarLogo{
             font-size: 3vmax;
             font-weight: 500;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 font-size: 4vmax;
             }
             a{
@@ -39,7 +39,7 @@ body{
         }
         .menu{
             display: block;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 position: absolute;
                 padding: 5vmax 0;
                 top: 100%;
@@ -56,7 +56,7 @@ body{
                 align-items: center;
                 justify-content: space-around;
                 list-style: none;
-                @media screen and (max-width: 800px) {
+                @media screen and ( orientation: portrait) {
                     flex-direction: column;
                 }
                 li{
@@ -66,7 +66,7 @@ body{
                     cursor: pointer;
                     position: relative;
                     transition: 350ms ease;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         padding: 4vmax 0;
                         font-size: 2vmax;
                         height: 0;
@@ -100,7 +100,7 @@ body{
                 }
                 .menu-contact{
                     color: $main-color;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         color: white;
                     }
                 }
@@ -120,7 +120,7 @@ body{
                 background-size: cover;
                 transition: 350ms ease;
                 display: none;
-                @media screen and (max-width: 800px) {
+                @media screen and ( orientation: portrait) {
                    display: block;
                 }
             }
@@ -137,7 +137,7 @@ body{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             background-image: url(../assets/images/wrapper1mob.jpg);
             background-position: center;
             background-size: cover;
@@ -149,7 +149,7 @@ body{
             justify-content: space-around;
             align-items: flex-start;
             transform: skewX(-8deg);
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 margin: 0;
                 height: 60%;
                 transform: skewX(0);
@@ -161,8 +161,11 @@ body{
                 text-transform: uppercase;
                 font-weight: 500;
                 line-height: 140%;
-                @media screen and (max-width: 800px) {
+                @media screen and ( orientation: portrait) {
                     font-size: 7vmax;
+                }
+                @media screen and ( max-width: 500px) {
+                    font-size: 5.5vmax;
                 }
                 a{
                     color: $main-color;
@@ -173,9 +176,15 @@ body{
                 font-size: 1.2vmax;
                 font-weight: 500;
                 line-height: 150%;
-                @media screen and (max-width: 800px) {
+                @media screen and ( orientation: portrait) {
                     font-size: 2vmax;
                     margin-top: 3vmax;
+                }
+                @media screen and ( max-width: 500px) {
+                    width: 90%;
+                    .todelete{
+                        display: none;
+                    }
                 }
                 a{
                     color: $main-color;
@@ -188,7 +197,7 @@ body{
                 background-color: $white;  
                 transition: 350ms ease-in-out;
                 cursor: pointer;
-                @media screen and (max-width: 800px) {
+                @media screen and ( orientation: portrait) {
                     padding: 2.5vmax 6vmax;
                     margin-top: 8vmax;
                     background-color: unset;
@@ -198,7 +207,7 @@ body{
                     font-size: 1.4vmax;
                     font-weight: 500;
                     transition: 350ms ease-in-out;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         font-size: 2.5vmax;
                         margin-left: auto;
                         margin-right: auto;
@@ -248,7 +257,7 @@ body{
             background-size: cover;
             border-radius: 50%;
             transform: skewX(-8deg);
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 display: none;
             }
         }
@@ -269,11 +278,17 @@ body{
         box-shadow: -2px 2px 15px -5px rgba(0, 0, 0, 1);
         cursor: pointer;
         transition: 500ms ease;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             width: 4vmax;
             height: 4vmax;
             bottom: 4vmax;
             right: 3vmax;
+        }
+        @media screen and ( max-width: 500px) {
+            width: 5vmax;
+            height: 5vmax;
+            bottom: 5vmax;
+            right: 4vmax;
         }
         &:hover{
             transform: rotate(360deg);
@@ -295,7 +310,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    @media screen and (max-width: 800px) {
+    @media screen and ( orientation: portrait) {
         padding: 0 0 10% 0;
         background-color: $white;
         flex-direction: column;
@@ -307,7 +322,7 @@ body{
         background-position: top;
         background-size: cover;
         border-radius: 25%;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             width: 100%;
             height: 40vmax;
             border-radius: 0;
@@ -323,15 +338,18 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             width: 80%;
             margin: 5vmax 0 0 0 ;  
+        }
+        @media screen and ( max-width: 500px) {
+            width: 90%;
         }
         
         h1{
             font-size: 2.4vmax;
             font-weight: 500;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 font-size: 4.5vmax;
             }
             a{
@@ -341,9 +359,12 @@ body{
         h3{
             font-size: 1.1vmax;
             font-weight: 400;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 font-size: 2vmax;
                 margin-top: 3vmax;
+            }
+            @media screen and ( max-width: 500px) {
+                width: 95%;
             }
             a{
                 color: $main-color;
@@ -359,9 +380,12 @@ body{
                     background-color: $white;  
                     transition: 350ms ease-in-out;
                     cursor: pointer;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         margin-top: 8vmax;
                         padding: 2vmax 3vmax; 
+                    }
+                    @media screen and ( max-width: 500px) {
+                        padding: 3vmax 4vmax;
                     }
                 p{
                     width: 100%;
@@ -370,7 +394,7 @@ body{
                     font-size: 1.2vmax;
                     font-weight: 500;
                     transition: 350ms ease-in-out;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         font-size: 2vmax;
                     }
                 }
@@ -422,7 +446,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media screen and (max-width: 800px) {
+    @media screen and ( orientation: portrait) {
         background-color: $white;
         background-image: none;
     }
@@ -432,8 +456,11 @@ body{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 5%;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 grid-template-columns: repeat(2, 1fr); 
+            }
+            @media screen and ( max-width: 500px) {
+                padding: 0 5%;
             }
             .standOut-box{
                 width: 90%;
@@ -445,15 +472,18 @@ body{
                 padding: 2vmax 0;
                 box-shadow: -1px 1px 25px -15px rgba(0, 0, 0, 1);
                 border-radius: 20px;
-                @media screen and (max-width: 800px) {
+                @media screen and ( orientation: portrait) {
                     padding: 4vmax 0;
+                }
+                @media screen and ( max-width: 500px) {
+                    width: 100%;
                 }
                 .standOut-icon{
                     width: 6vmax;
                     height: 6vmax;
                     background-position: center;
                     background-size: cover;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         width: 8vmax;
                         height: 8vmax;
                     }
@@ -476,7 +506,7 @@ body{
                     font-size: 1.6vmax;
                     margin: 1.5vmax 0 1vmax 0;
                     font-weight: 500;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         font-size: 2.2vmax;
                         margin: 2.5vmax 0 2vmax 0;
                     }
@@ -487,7 +517,7 @@ body{
                     color: black;
                     font-size: 0.9vmax;
                     font-weight: 400;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         font-size: 1.4vmax;
                         width: 90%;
                     }
@@ -505,7 +535,7 @@ body{
     display: flex;
     justify-content: space-around;  
     align-items: center;
-    @media screen and (max-width: 800px) {
+    @media screen and ( orientation: portrait) {
         flex-direction: column;
         background-color: $white;
         background-image: none;
@@ -517,13 +547,16 @@ body{
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             width: 80%;
+        }
+        @media screen and ( max-width: 500px) {
+            width: 90%;
         }
         h2{
             font-size: 3vmax;
             font-weight: 600;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 font-size: 4.5vmax;
              }
             a{
@@ -535,7 +568,7 @@ body{
             margin: 2vmax auto;
             font-size: 1.2vmax;
             line-height: 1.5vmax;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 width: 100%;
                 font-size: 2vmax;
                 line-height: unset;
@@ -554,9 +587,12 @@ body{
                     background-color: $white;  
                     transition: 350ms ease-in-out;
                     cursor: pointer;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         margin-top: 8vmax;
                         padding: 2vmax 3vmax; 
+                    }
+                    @media screen and ( max-width: 500px) {
+                        padding: 3vmax 4vmax;
                     }
                 p{
                     width: 100%;
@@ -565,7 +601,7 @@ body{
                     font-size: 1.2vmax;
                     font-weight: 500;
                     transition: 350ms ease-in-out;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         font-size: 2vmax;
                     }
                 }
@@ -612,10 +648,14 @@ body{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 2vmax;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             width: 80%;
             height: unset;
             margin-top: 15%;
+        }
+        @media screen and ( max-width: 500px) {
+            width: 90%;
+            margin-top: 10vmax;
         }
         .websites-box{
             width: 100%;
@@ -628,7 +668,7 @@ body{
             background-color: $white;
             box-shadow: -1px 1px 25px -15px rgba(0, 0, 0, 1);
             border-radius: 20px;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 padding: 4vmax 0;
             }
             .websites-icon{
@@ -636,7 +676,7 @@ body{
                 height: 4vmax;
                 background-position: center;
                 background-size: cover;
-                @media screen and (max-width: 800px) {
+                @media screen and ( orientation: portrait) {
                     width: 6vmax;
                     height: 6vmax;
                 }
@@ -657,7 +697,7 @@ body{
                 font-size: 1.2vmax;
                 font-weight: 500;
                 color: $main-color;
-                @media screen and (max-width: 800px) {
+                @media screen and ( orientation: portrait) {
                     font-size: 2.2vmax;
                     margin: 2.5vmax 0 2vmax 0;
                 }
@@ -665,7 +705,7 @@ body{
             .websites-description {
                 font-size: 0.8vmax;
                 width: 85%;
-                @media screen and (max-width: 800px) {
+                @media screen and ( orientation: portrait) {
                     font-size: 1.4vmax;
                     width: 90%;
                 }
@@ -683,7 +723,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    @media screen and (max-width: 800px) {
+    @media screen and ( orientation: portrait) {
         background-color: $white;
         background-image: none;
         flex-direction: column;
@@ -692,7 +732,7 @@ body{
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             margin-top: 6vmax;
             justify-content: center;
             text-align: center;
@@ -700,7 +740,7 @@ body{
         h2{
             font-weight: 500;
             font-size: 2vmax;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 font-size: 4vmax;
             }
             a{
@@ -710,9 +750,12 @@ body{
         .colaboration-dropdown{
             width: 30vmax;
             margin-top: 3vmax;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 margin-top: 5vmax;
                 width: 80%;
+            }
+            @media screen and ( max-width: 500px) {
+                width: 95%;
             }
             .dropdown-item{
                 margin: 0.7vmax 0;
@@ -724,7 +767,7 @@ body{
                 align-items: center;
                 box-shadow: -1px 1px 25px -15px rgba(0, 0, 0, 1);
                 cursor: pointer;
-                @media screen and (max-width: 800px) {
+                @media screen and ( orientation: portrait) {
                     margin: 2vmax 0;
                     padding: 1vmax 2.5vmax;
                 }
@@ -737,7 +780,7 @@ body{
                         font-weight: 500;
                         font-size: 1.4vmax;
                         color: $main-color;
-                        @media screen and (max-width: 800px) {
+                        @media screen and ( orientation: portrait) {
                             font-size: 2.4vmax;
                         }
                     }
@@ -745,7 +788,7 @@ body{
                         color: black;
                         font-size: 1.2vmax;  
                         font-weight: 400;
-                        @media screen and (max-width: 800px) {
+                        @media screen and ( orientation: portrait) {
                             font-size: 2.2vmax;
                         } 
                     }
@@ -756,7 +799,7 @@ body{
                         background-position: center;
                         background-size: cover;
                         transition: 200ms ease;
-                        @media screen and (max-width: 800px) {
+                        @media screen and ( orientation: portrait) {
                             width: 1.8vmax;
                             height: 1.8vmax;
                         } 
@@ -770,13 +813,13 @@ body{
                     text-align: center;    
                     padding: 0;
                     transition: 200ms ease;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         width: 90%;
                     }
                     p{
                         font-weight: 400;
                         font-size: 0.9vmax;
-                        @media screen and (max-width: 800px) {
+                        @media screen and ( orientation: portrait) {
                             font-size: 1.6vmax;
                         }
                     }
@@ -794,7 +837,7 @@ body{
                     height: auto;
                     transform:scaleY(1);
                     transition: 200ms ease;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         padding: 2.5vmax 1vmax;
                     }
                 }
@@ -808,13 +851,13 @@ body{
         background-position: center;
         background-size: cover;
         border-radius: 25%;   
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             display: none;
         }
     }
     #mobile-photo{
         display: none;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             display: block;
             width: 100%;
             height: 40vmax;
@@ -836,15 +879,18 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    @media screen and (max-width: 800px) {
+    @media screen and ( orientation: portrait) {
         background-color: $white;
         background-image: none;
     }
     h2{
         font-size: 2.4vmax;
         font-weight: 500;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             font-size: 4vmax;
+        }
+        @media screen and ( max-width: 500px) {
+            text-align: center;
         }
         a{
             color: $main-color;
@@ -856,8 +902,9 @@ body{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 4vmax;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             grid-template-columns: 1fr ;
+            width: 75%;
         }
         .portfolio-item{
             width: 100%;
@@ -865,6 +912,9 @@ body{
             display: flex;
             border-radius: 20px;
             box-shadow: -1px 1px 25px -15px rgba(0, 0, 0, 1);
+            @media screen and ( max-width: 500px) {
+                flex-direction: column;
+            }
             .portfolio-content{
                 width: 50%;
                 height: 100%;
@@ -872,15 +922,26 @@ body{
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+                position: relative;
+                right: 50%;
                 justify-content: space-around;
+                @media screen and ( max-width: 500px) {
+                    width: 100%;
+                    right: 0;
+                    align-items: center;
+                    justify-content: space-between;
+                }
                 h3{
                     font-size: 1.4vmax;
                     font-weight: 500;
                     color: $main-color;
                     margin-top: 2vmax;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         font-size: 2.2vmax;
                         margin-top: 4vmax;
+                    }
+                    @media screen and ( max-width: 500px) {
+                        font-size: 2.5vmax;
                     }
                 }
                 p{
@@ -888,9 +949,13 @@ body{
                     font-weight: 300;
                     font-size: 0.9vmax;
                     margin-top: 2vmax;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         margin-top: 4vmax;
                         font-size: 1.5vmax;
+                    }
+                    @media screen and ( max-width: 500px) {
+                        font-size: 1.8vmax;
+                        margin-top: 2vmax;
                     }
                 }
                 .portfolio-content-button{
@@ -902,18 +967,35 @@ body{
                     color: $white;
                     border-bottom-left-radius: 20px;
                     cursor: pointer;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         margin-top: 5vmax;
                         font-size: 1.5vmax;
+                        border-bottom-right-radius: 20px;
+                        margin-top: 4vmax;
+                    }
+                    @media screen and ( max-width: 500px) {
+                        font-size: 1.8vmax;
+                        padding: 1vmax 0;
+                        margin-top: 2vmax;
                     }
                 }
             }
             .portfolio-photo{
+                position: relative;
+                left: 50%;
                 width: 50%;
                 height: 100%;
                 border-top-right-radius: 20px;
                 border-bottom-right-radius: 20px;
                 background-color: brown;
+                @media screen and ( max-width: 500px) {
+                    width: 100%;
+                    height: 15vmax;
+                    left: 0;
+                    border-top-right-radius: 20px;
+                    border-top-left-radius: 20px;
+                    border-bottom-right-radius: 0;
+                }
             }
         }
     }
@@ -934,8 +1016,11 @@ body{
         border-top-right-radius: 200px;
         border-bottom-right-radius: 200px;
         margin-top: 5vmax;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             font-size: 4vmax;
+        }
+        @media screen and ( max-width: 500px) {
+            font-size: 3vmax;
         }
     }
     .contact-container{
@@ -944,12 +1029,15 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @media screen and (max-width: 800px) {
+        @media screen and ( orientation: portrait) {
             flex-direction: column;
+        }
+        @media screen and ( max-width: 500px) {
+           width: 90%;
         }
         .contact-form-container{
             width: 45%;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 width: 100%;
             }
             .contact-form{
@@ -958,23 +1046,49 @@ body{
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: repeat(6, 1fr);
                 grid-gap: 2vmax;
+                @media screen and ( max-width: 500px) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(7, 1fr);
+                 }
                 .form-field{
                     border: none;
                     outline: none;
                     font-size: 1vmax;
                     padding: 0.5vmax 1vmax;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         font-size: 1.6vmax;
+                    }
+                }
+                .name-field{
+                    display: block;
+                    @media screen and ( max-width: 500px) {
+                        grid-row: 1/2;
+                        grid-column: 1/2;
+                    }
+                }
+                .surname-field{
+                    display: block;
+                    @media screen and ( max-width: 500px) {
+                        grid-row: 2/3;
+                        grid-column: 1/2;
                     }
                 }
                 .email-field{
                     grid-row: 2/3;
                     grid-column: 1/3;
+                    @media screen and ( max-width: 500px) {
+                        grid-row: 3/4;
+                        grid-column: 1/2;
+                    }
                 }
                 .msg-field{
                     grid-row: 3/6;
                     grid-column: 1/3;
                     resize: none;
+                    @media screen and ( max-width: 500px) {
+                        grid-row: 4/7;
+                        grid-column: 1/2;
+                    }
                 }
                 .form-button{
                     background-color: $main-color;
@@ -987,8 +1101,12 @@ body{
                     font-size: 1vmax;
                     padding: 1vmax 3vmax;
                     cursor: pointer;
-                    @media screen and (max-width: 800px) {
+                    @media screen and ( orientation: portrait) {
                         font-size: 1.6vmax;
+                    }
+                    @media screen and ( max-width: 500px) {
+                        grid-row: 7/8;
+                        grid-column: 1/2;
                     }
                 }
             }
@@ -998,7 +1116,7 @@ body{
             height: 30vmax;
             margin-top: -5vmax;
             background-color: $white;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 width: 70%;
                 height: 4px;
                 margin-top: 5vmax;
@@ -1009,7 +1127,7 @@ body{
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            @media screen and (max-width: 800px) {
+            @media screen and ( orientation: portrait) {
                 align-items: center;
                 width: 50%;
                 margin-top: 5vmax;
@@ -1021,7 +1139,7 @@ body{
                 font-size: 1.2vmax;
                 color: black;
                 cursor: pointer;
-                @media screen and (max-width: 800px) {
+                @media screen and ( orientation: portrait) {
                     width: 80%;  
                     text-align: center;
                     font-size: 1.6vmax;   
@@ -1064,7 +1182,7 @@ body{
     letter-spacing: 0.5vmax;
     text-align: center;
     font-size: 0.8vmax;
-    @media screen and (max-width: 800px) {
+    @media screen and ( orientation: portrait) {
         font-size: 1.2vmax;   
         padding: 1vmax 0;      
     }
