@@ -19,6 +19,88 @@ body {
   display: flex;
 }
 
+@media screen and (orientation: portrait) {
+  .wrapper {
+    background-position: center;
+    background-size: cover;
+    background-image: url(../assets/images/photo3mob.jpg);
+    overflow-y: hidden;
+  }
+}
+
+.wrapper .goBackButton {
+  position: absolute;
+  background-color: black;
+  top: 3vmax;
+  padding: 0.5vmax 2vmax;
+  border: 2px solid black;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
+  z-index: 999;
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper .goBackButton {
+    padding: 1vmax 3vmax;
+  }
+}
+
+.wrapper .goBackButton .goBackIcon {
+  width: 1.5vmax;
+  height: 1.5vmax;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  background-image: url(../assets/icons/arrow-icon.svg);
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
+          filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper .goBackButton .goBackIcon {
+    width: 2.5vmax;
+    height: 2.5vmax;
+  }
+}
+
+.wrapper .goBackButton a {
+  text-decoration: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.wrapper .goBackButton a p {
+  margin-left: 1vmax;
+  font-size: 1.2vmax;
+  color: #fafafa;
+  cursor: pointer;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper .goBackButton a p {
+    font-size: 2vmax;
+    margin-left: 2vmax;
+  }
+}
+
+.wrapper .goBackButton:hover {
+  background-color: #27AE60;
+  border: 2px solid #27AE60;
+}
+
+.wrapper .goBackButton:hover p {
+  margin-left: 2vmax;
+}
+
 .wrapper .photo {
   width: 45%;
   height: 100%;
@@ -36,55 +118,10 @@ body {
           align-items: flex-start;
 }
 
-.wrapper .photo .goBackButton {
-  background-color: black;
-  margin: 3vmax 0;
-  padding: 0.5vmax 5% 0.5vmax 15%;
-  border: 2px solid black;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  -webkit-transition: 250ms ease;
-  transition: 250ms ease;
-}
-
-.wrapper .photo .goBackButton .goBackIcon {
-  width: 1.5vmax;
-  height: 1.5vmax;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  background-image: url(../assets/icons/arrow-icon.svg);
-  background-position: center;
-  background-size: cover;
-  -webkit-filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
-          filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.wrapper .photo .goBackButton a {
-  text-decoration: none;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.wrapper .photo .goBackButton a p {
-  margin-left: 1vmax;
-  font-size: 1.2vmax;
-  color: #fafafa;
-  cursor: pointer;
-  -webkit-transition: 250ms ease;
-  transition: 250ms ease;
-}
-
-.wrapper .photo .goBackButton:hover {
-  background-color: #27AE60;
-  border: 2px solid #27AE60;
-}
-
-.wrapper .photo .goBackButton:hover p {
-  margin-left: 2vmax;
+@media screen and (orientation: portrait) {
+  .wrapper .photo {
+    display: none;
+  }
 }
 
 .wrapper .text-container {
@@ -97,6 +134,21 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper .text-container {
+    width: 100%;
+    height: unset;
+    margin: 20% 0 10% 0;
+    overflow-y: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper .text-container {
+    margin-top: 25%;
+  }
 }
 
 .wrapper .text-container .content {
@@ -114,10 +166,30 @@ body {
           align-items: center;
 }
 
+@media screen and (orientation: portrait) {
+  .wrapper .text-container .content {
+    width: 70%;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper .text-container .content {
+    width: 80%;
+  }
+}
+
 .wrapper .text-container .content h1 {
   margin: 10% 0;
   font-size: 3vmax;
   font-weight: 500;
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper .text-container .content h1 {
+    font-size: 5vmax;
+    margin: 0 0 10% 0;
+  }
 }
 
 .wrapper .text-container .content p {
@@ -126,6 +198,13 @@ body {
   font-size: 1.1vmax;
   line-height: 1.5vmax;
   font-weight: 400;
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper .text-container .content p {
+    font-size: 2vmax;
+    line-height: unset;
+  }
 }
 
 .wrapper .text-container .content p a {

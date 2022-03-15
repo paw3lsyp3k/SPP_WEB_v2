@@ -25,14 +25,18 @@ body{
     
     .goBackButton{
         position: absolute;
-        top: 2vmax;
+        top: 3vmax;
         left: 0;
-        padding: 0.5vmax 1vmax 0.5vmax 2vmax;
+        padding: 0.5vmax 2vmax;
         border: 2px solid black;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         transition: 250ms ease;
         background-color: black;
+        z-index: 999;
+        @media screen and ( orientation: portrait) {
+            padding: 1vmax 3vmax;
+        }
         .goBackIcon{
             width: 1.5vmax;
             height: 1.5vmax;
@@ -43,6 +47,10 @@ body{
             filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
             cursor: pointer;
             text-decoration: none;
+            @media screen and ( orientation: portrait) {
+                width: 2.5vmax;
+                height: 2.5vmax;
+            }
         }
         a{
             text-decoration: none;
@@ -54,6 +62,10 @@ body{
                 color: $white;
                 cursor: pointer;
                 transition: 250ms ease;
+                @media screen and ( orientation: portrait) {
+                    font-size: 2vmax;
+                    margin-left: 2vmax;
+                }
             }
         }
         &:hover{
@@ -70,11 +82,25 @@ body{
         font-weight: 400;
         line-height: 6vmax;
         z-index: 9999;
+        @media screen and ( orientation: portrait) {
+            font-size: 4.5vmax;
+            text-align: center;
+        }
         p{
             position: relative;
             text-align: right;
             margin-right: -2vmax;
             z-index: 9999;
+            @media screen and ( orientation: portrait) {
+                
+                text-align: center;
+            }
+            .mobile-brake{
+                display: none;
+                @media screen and ( orientation: portrait) {
+                    display: block;
+                }
+            }
             &::before{
                 content:'';
                 display: block;
@@ -85,7 +111,10 @@ body{
                 height: 1vmax;
                 background-color: $main-color;
                 z-index: -1;
-    
+                @media screen and ( orientation: portrait) {
+                    width: 45%;
+                    right: 0;
+                }
             }
         }
         &::after{
@@ -98,6 +127,9 @@ body{
             height: 1vmax;
             background-color: $main-color;
             z-index: -1;
+            @media screen and ( orientation: portrait) {
+                width: 45%;
+            }
         }
     }
     h3{
@@ -106,6 +138,11 @@ body{
         font-size: 1.2vmax;
         font-weight: 300;
         text-align: center;
+        @media screen and ( orientation: portrait) {
+            width: 70%;
+            margin-top: 6vmax;
+            font-size: 2vmax;
+        }
     }
     .scroll{
         position: absolute;
@@ -117,8 +154,16 @@ body{
         background-size: cover;
         cursor: pointer;
         transition: 350ms ease;
+        @media screen and ( orientation: portrait) {
+            width: 4vmax;
+            height: 4vmax;
+            bottom: 10vmax;
+        }
         &:hover{
             bottom: 4.5vmax;
+            @media screen and ( orientation: portrait) {
+                bottom: 11vmax;
+            }
         }
     }
     #goUp-button{
@@ -136,6 +181,13 @@ body{
         box-shadow: -2px 2px 15px -5px rgba(0, 0, 0, 1);
         cursor: pointer;
         transition: 500ms ease;
+        z-index: 999;
+        @media screen and ( orientation: portrait) {
+            width: 4vmax;
+            height: 4vmax;
+            bottom: 4vmax;
+            right: 3vmax;
+        }
         &:hover{
             transform: rotate(360deg);
         }
@@ -150,7 +202,7 @@ body{
 
 .standOut-wrapper{
     width: 100%;
-    padding: 8vmax 0;
+    padding: 7vmax 0;
     background-color: $main-color;
     display: flex;
     justify-content: space-between;
@@ -158,11 +210,20 @@ body{
         .boxes{
             width: 100%;
             padding: 0 10%;
-            display: flex;
-            align-items: center;
-            justify-content: space-around;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5%;
+            @media screen and ( orientation: portrait) {
+                grid-template-columns: repeat(2, 1fr); 
+                height: unset;
+                margin-top: -5%;
+                height: 105%;
+            }
+            @media screen and ( max-width: 500px) {
+                padding: 0 5%;
+            }
             .standOut-box{
-                width: 18%;
+                width: 90%;
                 background-color: $white;
                 display: flex;
                 flex-direction: column;
@@ -171,11 +232,21 @@ body{
                 padding: 2vmax 0;
                 box-shadow: -1px 1px 25px -15px rgba(0, 0, 0, 1);
                 border-radius: 20px;
+                @media screen and ( orientation: portrait) {
+                    padding: 4vmax 0;
+                }
+                @media screen and ( max-width: 500px) {
+                    width: 100%;
+                }
                 .standOut-icon{
                     width: 5vmax;
                     height: 5vmax;
                     background-position: center;
                     background-size: cover;
+                    @media screen and ( orientation: portrait) {
+                        width: 8vmax;
+                        height: 8vmax;
+                    }
                 }
                 .so-box-icon1{
                     background-image: url(../assets/icons/websites-icon1.svg);
@@ -195,7 +266,10 @@ body{
                     font-size: 1.5vmax;
                     margin: 1.5vmax 0 1vmax 0;
                     font-weight: 500;
-                    
+                    @media screen and ( orientation: portrait) {
+                        font-size: 2.2vmax;
+                        margin: 2.5vmax 0 2vmax 0;
+                    }
                 }
                 .standOut-description{
                     text-align: center;
@@ -203,6 +277,10 @@ body{
                     color: black;
                     font-size: 0.9vmax;
                     font-weight: 400;
+                    @media screen and ( orientation: portrait) {
+                        font-size: 1.4vmax;
+                        width: 90%;
+                    }
                 }
             }  
         }
@@ -215,27 +293,52 @@ body{
     align-items: center;
     justify-content: space-around;
     padding: 7% 0;
+    @media screen and ( orientation: portrait) {
+        flex-direction: column;
+        padding: 10% 0;
+    }
     .description1-image{
         width: 30vmax;
         height: 30vmax;
         background-image: url(../assets/icons/ilustration1.svg);
         background-position: center;
         background-size: cover;
+        @media screen and ( orientation: portrait) {
+            width: 100%;
+        }
     }
     .description1-content{
         width: 40%;
+        @media screen and ( orientation: portrait) {
+            width: 90%;
+            margin-top: 10%;
+            text-align: center;
+        }
         h2{
             font-weight: 500;
             font-size: 2vmax;
             color: $main-color;
+            @media screen and ( orientation: portrait) {
+                font-size: 4vmax;
+            }
         }
         ul{
             margin-top: 4vmax;
-            list-style: none; /* Remove default bullets */
+            list-style: none; 
+            @media screen and ( orientation: portrait) {
+                width: 80%;
+                margin: 6vmax auto 0 auto;
+            }
             
         } li{
             margin-top: 1.2vmax;
             font-size: 1.2vmax;
+            @media screen and ( orientation: portrait) {
+                font-size: 2vmax;
+                text-align: left;
+                line-height: 3vmax;
+                margin-top: 2vmax;
+            }
             &::before {
                 content: "\2022"; 
                 color: $main-color;
@@ -243,6 +346,7 @@ body{
                 display: inline-block;
                 width: 1vmax; 
                 margin-left: -1em; 
+                margin-right: 1vmax;
               }
         }
     }
@@ -257,18 +361,32 @@ body{
     align-items: center;
     padding: 7% 0;
     color: $white;
+    @media screen and ( orientation: portrait) {
+        flex-direction: column;
+    }
     .information-content{
         width: 40%;
+        @media screen and ( orientation: portrait) {
+           width: 80%;
+           text-align: center;
+        }
         h2{
             font-weight: 600;
             font-size: 2.6vmax;
-           
+            @media screen and ( orientation: portrait) {
+                font-size: 4vmax;
+            }
         }
         p{
             margin-top: 4vmax;
             font-weight: 500;
             font-size: 1vmax;
-            
+            @media screen and ( orientation: portrait) {
+                width: 90%;
+                margin: 6vmax auto;
+                font-size: 2vmax;
+                font-weight: 400;
+            }
         }
     }
     .information-image{
@@ -277,6 +395,10 @@ body{
         background-image: url(../assets/icons/ilustration2.svg);
         background-position: center;
         background-size: cover;
+        @media screen and ( orientation: portrait) {
+            width: 100%;
+            margin-top: 4vmax;
+        }
     }
 }
 
@@ -291,6 +413,9 @@ body{
     h2{
         font-size: 2.4vmax;
         font-weight: 500;
+        @media screen and ( orientation: portrait) {
+           font-size: 4vmax;
+        }
     }
     .pricing-container{
         width: 70%;
@@ -298,6 +423,11 @@ body{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 5vmax;
+        @media screen and ( orientation: portrait) {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+        }
         .pricing-item{
             width: 100%;
             padding-bottom: 2vmax;
@@ -315,9 +445,15 @@ body{
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @media screen and ( orientation: portrait) {
+                    padding: 1vmax 0;
+                }
                 p{
                     font-size: 1vmax;
                     color: white;
+                    @media screen and ( orientation: portrait) {
+                        font-size: 2vmax; 
+                    }
                 }
             }
             .type1{
@@ -336,6 +472,10 @@ body{
                 background-position: center;
                 background-size: cover;
                 filter: invert(21%) sepia(0%) saturate(3542%) hue-rotate(88deg) brightness(92%) contrast(84%);
+                @media screen and ( orientation: portrait) {
+                    width: 8vmax;
+                    height: 8vmax;
+                }
             }
             .pricing-list{
                 width: 90%;
@@ -346,11 +486,20 @@ body{
                     text-align: center;
                     font-size: 0.9vmax;
                     border-bottom: 2px solid rgba(50,50,50,0.2);
+                    @media screen and ( orientation: portrait) {
+                        font-size: 2vmax;
+                        padding: 1vmax 0;
+                        margin: 3vmax 0;
+                    }
                 }
             }
             .pricing-number{
                 margin-top: 2vmax;
                 font-size: 2vmax;
+                @media screen and ( orientation: portrait) {
+                    margin-top: 6vmax;
+                    font-size: 3.5vmax;
+                }
             }
         }
         .item1{
@@ -373,6 +522,9 @@ body{
         background-color: $white;  
         transition: 350ms ease-in-out;
         cursor: pointer;
+        @media screen and ( orientation: portrait) {
+            padding: 2vmax 3vmax; 
+        }
             p{
                 width: 100%;
                 margin: 0;
@@ -380,6 +532,9 @@ body{
                 font-size: 1.2vmax;
                 font-weight: 500;
                 transition: 350ms ease-in-out;
+                @media screen and ( orientation: portrait) {
+                    font-size: 2vmax; 
+                }
             }
     }
     .websites-button:hover{
@@ -438,6 +593,12 @@ body{
         border-top-right-radius: 200px;
         border-bottom-right-radius: 200px;
         margin-top: 5vmax;
+        @media screen and ( orientation: portrait) {
+            font-size: 4vmax;
+        }
+        @media screen and ( max-width: 500px) {
+            font-size: 3vmax;
+        }
     }
     .contact-container{
         width: 80%;
@@ -445,28 +606,66 @@ body{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @media screen and ( orientation: portrait) {
+            flex-direction: column;
+        }
+        @media screen and ( max-width: 500px) {
+           width: 90%;
+        }
         .contact-form-container{
             width: 45%;
+            @media screen and ( orientation: portrait) {
+                width: 100%;
+            }
             .contact-form{
                 width: 100%;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: repeat(6, 1fr);
                 grid-gap: 2vmax;
+                @media screen and ( max-width: 500px) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: repeat(7, 1fr);
+                 }
                 .form-field{
                     border: none;
                     outline: none;
                     font-size: 1vmax;
                     padding: 0.5vmax 1vmax;
+                    @media screen and ( orientation: portrait) {
+                        font-size: 1.6vmax;
+                    }
+                }
+                .name-field{
+                    display: block;
+                    @media screen and ( max-width: 500px) {
+                        grid-row: 1/2;
+                        grid-column: 1/2;
+                    }
+                }
+                .surname-field{
+                    display: block;
+                    @media screen and ( max-width: 500px) {
+                        grid-row: 2/3;
+                        grid-column: 1/2;
+                    }
                 }
                 .email-field{
                     grid-row: 2/3;
                     grid-column: 1/3;
+                    @media screen and ( max-width: 500px) {
+                        grid-row: 3/4;
+                        grid-column: 1/2;
+                    }
                 }
                 .msg-field{
                     grid-row: 3/6;
                     grid-column: 1/3;
                     resize: none;
+                    @media screen and ( max-width: 500px) {
+                        grid-row: 4/7;
+                        grid-column: 1/2;
+                    }
                 }
                 .form-button{
                     background-color: $main-color;
@@ -479,6 +678,13 @@ body{
                     font-size: 1vmax;
                     padding: 1vmax 3vmax;
                     cursor: pointer;
+                    @media screen and ( orientation: portrait) {
+                        font-size: 1.6vmax;
+                    }
+                    @media screen and ( max-width: 500px) {
+                        grid-row: 7/8;
+                        grid-column: 1/2;
+                    }
                 }
             }
         }
@@ -487,12 +693,22 @@ body{
             height: 30vmax;
             margin-top: -5vmax;
             background-color: $white;
+            @media screen and ( orientation: portrait) {
+                width: 70%;
+                height: 4px;
+                margin-top: 5vmax;
+            }
         }
         .contact-socials{
             width: 35%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            @media screen and ( orientation: portrait) {
+                align-items: center;
+                width: 50%;
+                margin-top: 5vmax;
+            }
             .socials{
                 background-color: $white;
                 margin: 1vmax;
@@ -500,6 +716,12 @@ body{
                 font-size: 1.2vmax;
                 color: black;
                 cursor: pointer;
+                @media screen and ( orientation: portrait) {
+                    width: 80%;  
+                    text-align: center;
+                    font-size: 1.6vmax;   
+                    padding: 1.5vmax 5vmax;          
+                }
             }
             .mail{
                 border-left: 20px solid $main-color;
@@ -542,4 +764,9 @@ body{
     background-color: $main-color;
     letter-spacing: 0.5vmax;
     text-align: center;
+    font-size: 0.8vmax;
+    @media screen and ( orientation: portrait) {
+        font-size: 1.2vmax;   
+        padding: 1vmax 0;      
+    }
 }

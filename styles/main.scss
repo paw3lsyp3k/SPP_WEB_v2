@@ -278,17 +278,12 @@ body{
         box-shadow: -2px 2px 15px -5px rgba(0, 0, 0, 1);
         cursor: pointer;
         transition: 500ms ease;
+        z-index: 999;
         @media screen and ( orientation: portrait) {
             width: 4vmax;
             height: 4vmax;
             bottom: 4vmax;
             right: 3vmax;
-        }
-        @media screen and ( max-width: 500px) {
-            width: 5vmax;
-            height: 5vmax;
-            bottom: 5vmax;
-            right: 4vmax;
         }
         &:hover{
             transform: rotate(360deg);
@@ -373,16 +368,19 @@ body{
         }
             a{
                 text-decoration: none;
+                margin-top: 3vmax;
+                @media screen and ( orientation: portrait) {     
+                    margin-top: 8vmax;
+                }
                 .aboutMe-content-button{
                     position: relative;
-                    margin-top: 3vmax;
                     padding: 1.3vmax 2vmax;
                     background-color: $white;  
                     transition: 350ms ease-in-out;
                     cursor: pointer;
                     @media screen and ( orientation: portrait) {
-                        margin-top: 8vmax;
                         padding: 2vmax 3vmax; 
+                        margin-top: 0;
                     }
                     @media screen and ( max-width: 500px) {
                         padding: 3vmax 4vmax;
@@ -580,15 +578,17 @@ body{
         
             a{
                 text-decoration: none;
+                margin-top: 2vmax;
+                @media screen and ( orientation: portrait) {
+                    margin-top: 8vmax;
+                }
                 .websites-button{
                     position: relative;
-                    margin-top: 2vmax;
                     padding: 1.3vmax 2vmax;
                     background-color: $white;  
                     transition: 350ms ease-in-out;
                     cursor: pointer;
                     @media screen and ( orientation: portrait) {
-                        margin-top: 8vmax;
                         padding: 2vmax 3vmax; 
                     }
                     @media screen and ( max-width: 500px) {
@@ -970,13 +970,14 @@ body{
                     @media screen and ( orientation: portrait) {
                         margin-top: 5vmax;
                         font-size: 1.5vmax;
-                        border-bottom-right-radius: 20px;
+                        
                         margin-top: 4vmax;
                     }
                     @media screen and ( max-width: 500px) {
                         font-size: 1.8vmax;
                         padding: 1vmax 0;
                         margin-top: 2vmax;
+                        border-bottom-right-radius: 20px;
                     }
                 }
             }

@@ -18,6 +18,64 @@ body{
     width: 100vw;
     height: 100vh;
     display: flex;
+    @media screen and ( orientation: portrait) {
+        background-position: center;
+        background-size: cover;
+        background-image: url(../assets/images/photo3mob.jpg);
+        overflow-y: hidden;
+    }
+    .goBackButton{
+        position: absolute;
+        background-color: black;
+        top: 3vmax;
+        padding: 0.5vmax 2vmax;
+        border: 2px solid black;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        transition: 250ms ease;
+        z-index: 999;
+        @media screen and ( orientation: portrait) {
+            padding: 1vmax 3vmax;
+        }
+        .goBackIcon{
+            width: 1.5vmax;
+            height: 1.5vmax;
+            transform: rotate(90deg);
+            background-image: url(../assets/icons/arrow-icon.svg);
+            background-position: center;
+            background-size: cover;
+            filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
+            cursor: pointer;
+            text-decoration: none;
+            @media screen and ( orientation: portrait) {
+                width: 2.5vmax;
+                height: 2.5vmax;
+            }
+        }
+        a{
+            text-decoration: none;
+            border: none;
+            display: flex;
+            p{
+                margin-left: 1vmax;
+                font-size: 1.2vmax;
+                color: $white;
+                cursor: pointer;
+                transition: 250ms ease;
+                @media screen and ( orientation: portrait) {
+                    font-size: 2vmax;
+                    margin-left: 2vmax;
+                }
+            }
+        }
+            &:hover{
+                background-color: $main-color;
+                border: 2px solid $main-color;
+                p{
+                    margin-left: 2vmax;
+                }
+            }
+    }
     .photo{
         width: 45%;
         height: 100%;
@@ -28,44 +86,8 @@ body{
         background-size: cover;
         display: flex;
         align-items: flex-start;
-        .goBackButton{
-            background-color: black;
-            margin: 3vmax 0;
-            padding: 0.5vmax 5% 0.5vmax 15%;
-            border: 2px solid black;
-            border-top-right-radius: 20px;
-            border-bottom-right-radius: 20px;
-            transition: 250ms ease;
-            .goBackIcon{
-                width: 1.5vmax;
-                height: 1.5vmax;
-                transform: rotate(90deg);
-                background-image: url(../assets/icons/arrow-icon.svg);
-                background-position: center;
-                background-size: cover;
-                filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
-                cursor: pointer;
-                text-decoration: none;
-            }
-            a{
-                text-decoration: none;
-                border: none;
-                display: flex;
-                p{
-                    margin-left: 1vmax;
-                    font-size: 1.2vmax;
-                    color: $white;
-                    cursor: pointer;
-                    transition: 250ms ease;
-                }
-            }
-                &:hover{
-                    background-color: $main-color;
-                    border: 2px solid $main-color;
-                    p{
-                        margin-left: 2vmax;
-                    }
-                }
+        @media screen and ( orientation: portrait) {
+           display: none;
         }
     }
     .text-container{
@@ -74,16 +96,37 @@ body{
         overflow-y: auto;
         display: flex;
         justify-content: center;
+        @media screen and ( orientation: portrait) {
+            width: 100%;
+            height: unset;
+            margin: 20% 0 10% 0;
+            overflow-y: auto;
+        }
+        @media screen and ( max-width: 500px) {
+            margin-top: 25%;
+        }
         .content{
             width: 60%;
             height: 175%;
             display: flex;
             flex-direction: column;
             align-items:  center;
+            @media screen and ( orientation: portrait) {
+                width: 70%;
+                height: 100%;
+            }
+            @media screen and ( max-width: 500px) {
+                width: 80%;
+            }
             h1{
                 margin: 10% 0;
                 font-size: 3vmax;
                 font-weight: 500;
+                @media screen and ( orientation: portrait) {
+                    font-size: 5vmax;
+                    margin: 0 0 10% 0;
+                }
+
             }
             p{
                 margin: 1vmax 0;
@@ -91,6 +134,10 @@ body{
                 font-size: 1.1vmax;
                 line-height: 1.5vmax;
                 font-weight: 400;
+                @media screen and ( orientation: portrait) {
+                    font-size: 2vmax;
+                    line-height: unset;
+                }
                 a{
                     color: $main-color;
                 }

@@ -399,6 +399,7 @@ body {
   cursor: pointer;
   -webkit-transition: 500ms ease;
   transition: 500ms ease;
+  z-index: 999;
 }
 
 @media screen and (orientation: portrait) {
@@ -407,15 +408,6 @@ body {
     height: 4vmax;
     bottom: 4vmax;
     right: 3vmax;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .landing-wrapper #goUp-button {
-    width: 5vmax;
-    height: 5vmax;
-    bottom: 5vmax;
-    right: 4vmax;
   }
 }
 
@@ -547,11 +539,17 @@ body {
 
 .aboutMe-wrapper .aboutMe-content a {
   text-decoration: none;
+  margin-top: 3vmax;
+}
+
+@media screen and (orientation: portrait) {
+  .aboutMe-wrapper .aboutMe-content a {
+    margin-top: 8vmax;
+  }
 }
 
 .aboutMe-wrapper .aboutMe-content a .aboutMe-content-button {
   position: relative;
-  margin-top: 3vmax;
   padding: 1.3vmax 2vmax;
   background-color: #fafafa;
   -webkit-transition: 350ms ease-in-out;
@@ -561,8 +559,8 @@ body {
 
 @media screen and (orientation: portrait) {
   .aboutMe-wrapper .aboutMe-content a .aboutMe-content-button {
-    margin-top: 8vmax;
     padding: 2vmax 3vmax;
+    margin-top: 0;
   }
 }
 
@@ -860,11 +858,17 @@ body {
 
 .websites-wrapper .websites-text a {
   text-decoration: none;
+  margin-top: 2vmax;
+}
+
+@media screen and (orientation: portrait) {
+  .websites-wrapper .websites-text a {
+    margin-top: 8vmax;
+  }
 }
 
 .websites-wrapper .websites-text a .websites-button {
   position: relative;
-  margin-top: 2vmax;
   padding: 1.3vmax 2vmax;
   background-color: #fafafa;
   -webkit-transition: 350ms ease-in-out;
@@ -874,7 +878,6 @@ body {
 
 @media screen and (orientation: portrait) {
   .websites-wrapper .websites-text a .websites-button {
-    margin-top: 8vmax;
     padding: 2vmax 3vmax;
   }
 }
@@ -1475,7 +1478,6 @@ body {
   .portfolio-wrapper .portfolio-container .portfolio-item .portfolio-content .portfolio-content-button {
     margin-top: 5vmax;
     font-size: 1.5vmax;
-    border-bottom-right-radius: 20px;
     margin-top: 4vmax;
   }
 }
@@ -1485,6 +1487,7 @@ body {
     font-size: 1.8vmax;
     padding: 1vmax 0;
     margin-top: 2vmax;
+    border-bottom-right-radius: 20px;
   }
 }
 
