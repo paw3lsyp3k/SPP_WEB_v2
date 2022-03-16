@@ -119,6 +119,12 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .landing-wrapper h2 {
+    font-size: 3.5vmax;
+  }
+}
+
 .landing-wrapper h2 p {
   position: relative;
   text-align: right;
@@ -179,6 +185,13 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .landing-wrapper h2::after {
+    left: -2vmax;
+    top: 3.9vmax;
+  }
+}
+
 .landing-wrapper h3 {
   margin-top: 3vmax;
   width: 50%;
@@ -192,6 +205,12 @@ body {
     width: 70%;
     margin-top: 6vmax;
     font-size: 2vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .landing-wrapper h3 {
+    width: 80%;
   }
 }
 
@@ -480,6 +499,12 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .description1-wrapper .description1-content ul {
+    width: 70%;
+  }
+}
+
 .description1-wrapper .description1-content li {
   margin-top: 1.2vmax;
   font-size: 1.2vmax;
@@ -494,6 +519,12 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .description1-wrapper .description1-content li {
+    text-align: center;
+  }
+}
+
 .description1-wrapper .description1-content li::before {
   content: "\2022";
   color: #27AE60;
@@ -502,6 +533,12 @@ body {
   width: 1vmax;
   margin-left: -1em;
   margin-right: 1vmax;
+}
+
+@media screen and (max-width: 500px) {
+  .description1-wrapper .description1-content li::before {
+    font-size: 3vmax;
+  }
 }
 
 .information-wrapper {
@@ -576,7 +613,6 @@ body {
 @media screen and (orientation: portrait) {
   .information-wrapper .information-image {
     width: 100%;
-    margin-top: 4vmax;
   }
 }
 
@@ -607,6 +643,12 @@ body {
 @media screen and (orientation: portrait) {
   .pricing-wrapper h2 {
     font-size: 4vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pricing-wrapper h2 {
+    font-size: 3.5vmax;
   }
 }
 

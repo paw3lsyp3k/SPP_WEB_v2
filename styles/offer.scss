@@ -86,6 +86,9 @@ body{
             font-size: 4.5vmax;
             text-align: center;
         }
+        @media screen and ( max-width: 500px) {
+            font-size: 3.5vmax;
+        }
         p{
             position: relative;
             text-align: right;
@@ -130,6 +133,10 @@ body{
             @media screen and ( orientation: portrait) {
                 width: 45%;
             }
+            @media screen and ( max-width: 500px) {
+                left: -2vmax;
+                top: 3.9vmax;
+            }
         }
     }
     h3{
@@ -142,6 +149,9 @@ body{
             width: 70%;
             margin-top: 6vmax;
             font-size: 2vmax;
+        }
+        @media screen and ( max-width: 500px) {
+           width: 80%;
         }
     }
     .scroll{
@@ -329,6 +339,9 @@ body{
                 width: 80%;
                 margin: 6vmax auto 0 auto;
             }
+            @media screen and ( max-width: 500px) {
+                width: 70%;
+            }
             
         } li{
             margin-top: 1.2vmax;
@@ -339,6 +352,9 @@ body{
                 line-height: 3vmax;
                 margin-top: 2vmax;
             }
+            @media screen and ( max-width: 500px) {
+                text-align: center;
+             }
             &::before {
                 content: "\2022"; 
                 color: $main-color;
@@ -347,6 +363,9 @@ body{
                 width: 1vmax; 
                 margin-left: -1em; 
                 margin-right: 1vmax;
+                @media screen and ( max-width: 500px) {
+                    font-size: 3vmax;
+                }
               }
         }
     }
@@ -397,7 +416,6 @@ body{
         background-size: cover;
         @media screen and ( orientation: portrait) {
             width: 100%;
-            margin-top: 4vmax;
         }
     }
 }
@@ -415,6 +433,9 @@ body{
         font-weight: 500;
         @media screen and ( orientation: portrait) {
            font-size: 4vmax;
+        }
+        @media screen and ( max-width: 500px) {
+            font-size: 3.5vmax;
         }
     }
     .pricing-container{
