@@ -18,25 +18,26 @@ body{
     width: 100vw;
     height: 100vh;
     display: flex;
-    @media screen and ( orientation: portrait) {
-        background-position: center;
-        background-size: cover;
-        background-image: url(../assets/images/photo3mob.jpg);
-        overflow-y: hidden;
-    }
+    align-items: center;
+    justify-content: flex-end;
+    background-position: bottom;
+    background-size: cover;
+    background-image: url(../assets/images/aboutbg.png);
     .goBackButton{
         position: absolute;
+        top: 2vmax;
+        left: 0;
         background-color: black;
-        top: 3vmax;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 0.5vmax 2vmax;
         border: 2px solid black;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         transition: 250ms ease;
-        z-index: 999;
-        @media screen and ( orientation: portrait) {
-            padding: 1vmax 3vmax;
-        }
         .goBackIcon{
             width: 1.5vmax;
             height: 1.5vmax;
@@ -44,128 +45,231 @@ body{
             background-image: url(../assets/icons/arrow-icon.svg);
             background-position: center;
             background-size: cover;
+            background-repeat: no-repeat;
             filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
+            transition: 250ms ease;
+        }
+        p{
+            margin-left: 1vmax;
+            font-size: 1.2vmax;
+            color: $white;
             cursor: pointer;
-            text-decoration: none;
+            transition: 250ms ease;
             @media screen and ( orientation: portrait) {
-                width: 2.5vmax;
-                height: 2.5vmax;
+                font-size: 2vmax;
+                margin-left: 2vmax;
+            }
+        }
+        &:hover{
+            background-color: $main-color;
+            border: 2px solid $main-color;
+            p {
+            margin-left: 1.5vmax;
+            }   
+            .goBackIcon{
+                margin-left: 1vmax;
+            }
+        }
+    }
+    .wrapper-content{
+        width: 35%;
+        margin-right: 15%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            font-size: 2.4vmax;
+        }
+        p{
+            margin-top: 3vmax;
+            font-size: 1.2vmax;
+        }
+        .goDownIcon{
+            width: 2vmax;
+            height: 2vmax;
+            margin-top: 4vmax;
+            background-image: url(../assets/icons/scroll-icon.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            transition: 250ms ease;
+            &:hover{
+                filter: invert(48%) sepia(95%) saturate(370%) hue-rotate(93deg) brightness(95%) contrast(86%);;
             }
         }
         a{
-            text-decoration: none;
-            border: none;
-            display: flex;
-            p{
-                margin-left: 1vmax;
-                font-size: 1.2vmax;
-                color: $white;
-                cursor: pointer;
-                transition: 250ms ease;
-                @media screen and ( orientation: portrait) {
-                    font-size: 2vmax;
-                    margin-left: 2vmax;
-                }
-            }
-        }
-            &:hover{
-                background-color: $main-color;
-                border: 2px solid $main-color;
-                p{
-                    margin-left: 2vmax;
-                }
-            }
-    }
-    .photo{
-        width: 45%;
-        height: 100%;
-        margin-left: -3%;
-        background-image: url(../assets/images/photo3.jpg);
-        transform: skewX(5deg);
-        border-right: 10px solid $main-color;
-        background-size: cover;
-        display: flex;
-        align-items: flex-start;
-        @media screen and ( orientation: portrait) {
-           display: none;
+            color: $main-color;
         }
     }
-    .text-container{
-        width: 58%;
-        height: 100%;
-        overflow-y: auto;
+}
+.counter-wrapper{
+    width: 100%;
+    background-color: $white;  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2vmax 0;
+    .counter-content{
+        width: 60%;
         display: flex;
-        justify-content: center;
-        @media screen and ( orientation: portrait) {
-            width: 100%;
-            height: unset;
-            margin: 20% 0 10% 0;
-            overflow-y: auto;
-        }
-        @media screen and ( max-width: 500px) {
-            margin-top: 25%;
-        }
-        .content{
-            width: 60%;
-            height: 175%;
+        align-items: center;
+        padding: 1.5vmax 0;
+        justify-content: space-around;
+        background-color: $main-color; 
+        border-radius: 30px;
+        .counter-box{
             display: flex;
             flex-direction: column;
-            align-items:  center;
-            @media screen and ( orientation: portrait) {
-                width: 70%;
-                height: 100%;
-            }
-            @media screen and ( max-width: 500px) {
-                width: 80%;
-            }
-            h1{
-                margin: 10% 0;
-                font-size: 3vmax;
-                font-weight: 500;
-                @media screen and ( orientation: portrait) {
-                    font-size: 5vmax;
-                    margin: 0 0 10% 0;
-                }
-
-            }
-            p{
-                margin: 1vmax 0;
-                text-align: center;
-                font-size: 1.1vmax;
-                line-height: 1.5vmax;
-                font-weight: 400;
-                @media screen and ( orientation: portrait) {
-                    font-size: 2vmax;
-                    line-height: unset;
-                }
-                a{
-                    color: $main-color;
-                }
-            }
-        }
-        .goUp-button{
-            width: 2vmax;
-            height: 2vmax;
-            background-color: $white;
-            border-radius: 50%;
-            padding: 0.5vmax;
-            position: fixed;
-            bottom: 3vmax;
-            right: 2vmax;
-            display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: -2px 2px 15px -5px rgba(0, 0, 0, 1);
-            cursor: pointer;
-            transition: 500ms ease;
-            &:hover{
-                transform: rotate(360deg);
+            h3{
+                color: $white;
+                font-size: 1.6vmax;
+                font-weight: 400;
             }
-            img{
-                width: 60%;
-                height: 60%;
-                transform: rotate(180deg);
+            h4{
+                font-size: 1vmax;
+                font-weight: 400;
+                margin-top: 0.5vmax;
             }
+        }
+        .box-spacer::after{
+            content: '';
+            position: absolute;
+            margin-right: -15%;
+            display: block;
+            width: 3px;
+            height: 3vmax;
+            background-color: $white;
+        }     
+    }
+}
+.information1-wrapper{
+    width: 100%;
+    padding: 10vmax 0;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .information1-content{
+        width: 30%;
+        h2{
+            font-size: 2.4vmax;
+            font-weight: 500;
+            text-align: center;
+            
+        }
+        p{
+            margin-top: 3vmax;
+            font-size: 1.2vmax;
+            text-align: center;
+        }
+        a{
+            color: $main-color;
         } 
+    }
+    
+    .information1-picture{
+        width: 35vmax;
+        height: 25vmax;
+        background-image: url(../assets/images/about-img1.jpg);
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: -1vmax;
+            left: -1vmax;
+            width: 75%;
+            height: 1vmax;
+            background-color: $main-color;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            display: block;
+            bottom: -1vmax;
+            left: -1vmax;
+            width: 1vmax;
+            height: 75%;
+            background-color: $main-color;
+        }
+    }
+}
+
+.information2-wrapper{
+    width: 100%;
+    padding: 10vmax 0;
+    background-image: url(../assets/images/aboutbg3.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .information2-content{
+        width: 30%;
+        margin-right: -35%;
+        h2{
+            font-size: 2.4vmax;
+            font-weight: 500;
+            text-align: center;
+            
+        }
+        p{
+            margin-top: 3vmax;
+            font-size: 1.2vmax;
+            text-align: center;
+        }
+        a{
+            color: $main-color;
+        } 
+    }
+}
+
+.information3-wrapper{
+    width: 100%;
+    background-color: $main-color;
+    padding: 10vmax 0;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    .information3-text{
+        width: 20%;
+        margin-left: 5%;
+        color: $white;
+        h2{
+            font-size: 2.2vmax;
+        }
+        p{
+            font-size: 1.1vmax;
+            margin-top: 2vmax;
+            text-align: center;
+        }
+    }
+    .information3-box{
+        background-color: $white;
+        padding: 2vmax;
+        width: 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .information3-box-icon{
+            width: 5vmax;
+            height: 5vmax;
+            background-color: aquamarine;
+        }
+        p{
+            margin-top: 1vmax;
+            font-size: 1.1vmax;
+            text-align: center;
+        }
+    }
+    .box2{
+        margin-right: 5%;
     }
 }

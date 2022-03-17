@@ -32,22 +32,27 @@ body {
 
 .landing-wrapper .goBackButton {
   position: absolute;
-  top: 3vmax;
+  top: 2vmax;
   left: 0;
+  background-color: black;
+  text-decoration: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5vmax 2vmax;
   padding: 0.5vmax 2vmax;
   border: 2px solid black;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   -webkit-transition: 250ms ease;
   transition: 250ms ease;
-  background-color: black;
-  z-index: 999;
-}
-
-@media screen and (orientation: portrait) {
-  .landing-wrapper .goBackButton {
-    padding: 1vmax 3vmax;
-  }
 }
 
 .landing-wrapper .goBackButton .goBackIcon {
@@ -58,28 +63,14 @@ body {
   background-image: url(../assets/icons/arrow-icon.svg);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
   -webkit-filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
           filter: invert(100%) sepia(0%) saturate(7443%) hue-rotate(194deg) brightness(124%) contrast(96%);
-  cursor: pointer;
-  text-decoration: none;
+  -webkit-transition: 250ms ease;
+  transition: 250ms ease;
 }
 
-@media screen and (orientation: portrait) {
-  .landing-wrapper .goBackButton .goBackIcon {
-    width: 2.5vmax;
-    height: 2.5vmax;
-  }
-}
-
-.landing-wrapper .goBackButton a {
-  text-decoration: none;
-  border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.landing-wrapper .goBackButton a p {
+.landing-wrapper .goBackButton p {
   margin-left: 1vmax;
   font-size: 1.2vmax;
   color: #fafafa;
@@ -89,7 +80,7 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .landing-wrapper .goBackButton a p {
+  .landing-wrapper .goBackButton p {
     font-size: 2vmax;
     margin-left: 2vmax;
   }
@@ -101,7 +92,11 @@ body {
 }
 
 .landing-wrapper .goBackButton:hover p {
-  margin-left: 2vmax;
+  margin-left: 1.5vmax;
+}
+
+.landing-wrapper .goBackButton:hover .goBackIcon {
+  margin-left: 1vmax;
 }
 
 .landing-wrapper h2 {
