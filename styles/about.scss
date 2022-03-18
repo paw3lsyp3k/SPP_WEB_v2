@@ -159,7 +159,19 @@ body{
             font-size: 2.4vmax;
             font-weight: 500;
             text-align: center;
-            
+            position: relative;
+            z-index: 1;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 40%;
+                height: 8px;
+                bottom: 10%;
+                margin-left: -1vmax;
+                z-index: -1;
+                background-color: $main-color;
+            }
         }
         p{
             margin-top: 3vmax;
@@ -204,7 +216,7 @@ body{
 .information2-wrapper{
     width: 100%;
     padding: 10vmax 0;
-    background-image: url(../assets/images/aboutbg3.png);
+    background-image: url(../assets/images/aboutbg2.png);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -217,7 +229,20 @@ body{
             font-size: 2.4vmax;
             font-weight: 500;
             text-align: center;
-            
+            position: relative;
+            z-index: 1;
+            &::before{
+                content: '';
+                display: block;
+                position: absolute;
+                width: 40%;
+                height: 8px;
+                bottom: 10%;
+                right: 0;
+                margin-right: -1vmax;
+                z-index: -1;
+                background-color: $main-color;
+            }
         }
         p{
             margin-top: 3vmax;
@@ -238,11 +263,12 @@ body{
     align-items: center;
     justify-content:space-around;
     .information3-text{
-        width: 20%;
+        width: 25%;
         margin-left: 5%;
         color: $white;
         h2{
             font-size: 2.2vmax;
+            text-align: center;
         }
         p{
             font-size: 1.1vmax;
@@ -271,5 +297,108 @@ body{
     }
     .box2{
         margin-right: 5%;
+    }
+}
+
+.ourTeam-wrapper{
+    width: 100%;
+    padding: 6vmax 0;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    .OurTeam-wrapper-title{
+        font-size: 2.2vmax;
+        font-weight: 500;
+        margin-left: 5vmax;
+        position: relative;
+        z-index: 2;
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            width: 50%;
+            height: 8px;
+            bottom: 12%;
+            z-index: -1;
+            margin-left: -1.5vmax;
+            background-color: $main-color;
+        }
+    }
+    .ourTeam-container{
+        width: 80%;
+        display: grid;
+        margin: 5vmax auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20%;
+        row-gap: 5%;
+        .ourTeam-box{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 2vmax;
+            .ourTeam-photo{
+                width: 8vmax;
+                height: 8vmax;
+                border-radius: 50%;
+                background-color: gray;
+            }
+            .ourTeam-text{
+                width: 60%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                h2{
+                    font-size: 1.4vmax;
+                    color: $main-color;
+                    margin: 0;
+                }
+                p{
+                    font-size: 0.9vmax;
+                    margin-top: 0.5vmax;
+                }
+            }
+        }
+    }
+}
+
+.information4-wrapper{
+    width: 100%;
+    height: 90vh;
+    background-image: url(../assets/images/aboutbg3.jpg);
+    background-position: center;
+    background-size: cover;
+    .information4-container{
+        width: 60%;
+        height: 100%;
+        background-color: rgba(39, 174, 96,0.7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2{
+            font-size: 2.2vmax;
+            font-weight: 500;
+            color: $white;
+        }
+        p{
+            font-size: 1vmax;
+            width: 70%;
+            margin-top: 3vmax;
+            text-align: center;
+            color: $white;
+        }
+    }
+}
+footer{
+    background-color: rgb(83, 83, 83);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5vmax 0;
+    p{
+        color: $white;
     }
 }
