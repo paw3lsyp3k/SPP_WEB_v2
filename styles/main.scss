@@ -771,11 +771,17 @@ body{
                     margin: 2vmax 0;
                     padding: 1vmax 2.5vmax;
                 }
+                @media screen and ( max-width: 500px) {
+                    padding: 1vmax 2vmax;
+                }
                 .dropdown-item-section{
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    @media screen and ( max-width: 500px) {
+                        padding: 1vmax 0;
+                    }
                     h3{
                         font-weight: 500;
                         font-size: 1.4vmax;
@@ -803,6 +809,10 @@ body{
                             width: 1.8vmax;
                             height: 1.8vmax;
                         } 
+                        @media screen and ( max-width: 500px) {
+                            width: 2vmax;
+                            height: 2vmax;
+                        }
                     }
                 }
                 .dropdown-description{
@@ -822,12 +832,16 @@ body{
                         @media screen and ( orientation: portrait) {
                             font-size: 1.6vmax;
                         }
+                        @media screen and ( max-width: 500px) {
+                            font-size: 1.8vmax;
+                        }
                     }
                 }
             }
             .active{
                 .dropdown-item-section{
                     border-bottom: 2px solid $main-color;
+                    padding: 1vmax 0;
                 }
                 .dropdown-icon{
                     transform: rotate(180deg);
@@ -906,6 +920,9 @@ body{
             grid-template-columns: 1fr ;
             width: 75%;
         }
+        @media screen and ( max-width: 500px) {
+            width: 85%;
+        }
         .portfolio-item{
             width: 100%;
             background-color: $white;
@@ -914,6 +931,7 @@ body{
             box-shadow: -1px 1px 25px -15px rgba(0, 0, 0, 1);
             @media screen and ( max-width: 500px) {
                 flex-direction: column;
+                border-radius: 0;
             }
             .portfolio-content{
                 width: 50%;
@@ -942,6 +960,7 @@ body{
                     }
                     @media screen and ( max-width: 500px) {
                         font-size: 2.5vmax;
+                        margin-top: 3vmax;
                     }
                 }
                 p{
@@ -955,7 +974,7 @@ body{
                     }
                     @media screen and ( max-width: 500px) {
                         font-size: 1.8vmax;
-                        margin-top: 2vmax;
+                        margin-top: -1vmax;
                     }
                 }
                 .portfolio-content-button{
@@ -970,14 +989,14 @@ body{
                     @media screen and ( orientation: portrait) {
                         margin-top: 5vmax;
                         font-size: 1.5vmax;
-                        
                         margin-top: 4vmax;
                     }
                     @media screen and ( max-width: 500px) {
-                        font-size: 1.8vmax;
-                        padding: 1vmax 0;
-                        margin-top: 2vmax;
+                        font-size: 2vmax;
+                        padding: 1.5vmax 0;
+                        margin-top: 1vmax;
                         border-bottom-right-radius: 20px;
+                        border-radius: 0;
                     }
                 }
             }
@@ -991,7 +1010,7 @@ body{
                 background-color: brown;
                 @media screen and ( max-width: 500px) {
                     width: 100%;
-                    height: 15vmax;
+                    height: 25vmax;
                     left: 0;
                     border-top-right-radius: 20px;
                     border-top-left-radius: 20px;

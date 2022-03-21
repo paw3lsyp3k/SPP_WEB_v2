@@ -28,6 +28,17 @@ body {
   background-image: url(../assets/images/aboutbg.png);
 }
 
+@media screen and (orientation: portrait) {
+  .wrapper {
+    background-image: url(../assets/images/photo3mob.jpg);
+    height: unset;
+    padding: 25% 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .wrapper .goBackButton {
   position: absolute;
   top: 2vmax;
@@ -112,13 +123,52 @@ body {
           align-items: center;
 }
 
+@media screen and (orientation: portrait) {
+  .wrapper .wrapper-content {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper .wrapper-content {
+    width: 90%;
+  }
+}
+
 .wrapper .wrapper-content h2 {
   font-size: 2.4vmax;
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper .wrapper-content h2 {
+    font-size: 4.5vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper .wrapper-content h2 {
+    font-size: 3.5vmax;
+  }
 }
 
 .wrapper .wrapper-content p {
   margin-top: 3vmax;
   font-size: 1.2vmax;
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper .wrapper-content p {
+    margin-top: 5vmax;
+    font-size: 2.2vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper .wrapper-content p {
+    margin-top: 3vmax;
+    font-size: 2vmax;
+  }
 }
 
 .wrapper .wrapper-content .goDownIcon {
@@ -134,6 +184,14 @@ body {
   transition: 250ms ease;
 }
 
+@media screen and (orientation: portrait) {
+  .wrapper .wrapper-content .goDownIcon {
+    width: 4vmax;
+    height: 4vmax;
+    margin-top: 8vmax;
+  }
+}
+
 .wrapper .wrapper-content .goDownIcon:hover {
   -webkit-filter: invert(48%) sepia(95%) saturate(370%) hue-rotate(93deg) brightness(95%) contrast(86%);
           filter: invert(48%) sepia(95%) saturate(370%) hue-rotate(93deg) brightness(95%) contrast(86%);
@@ -141,6 +199,53 @@ body {
 
 .wrapper .wrapper-content a {
   color: #27AE60;
+}
+
+.wrapper #goUp-button {
+  width: 2vmax;
+  height: 2vmax;
+  background-color: #fafafa;
+  border-radius: 50%;
+  padding: 0.5vmax;
+  position: fixed;
+  bottom: 3vmax;
+  right: 2vmax;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: -2px 2px 15px -5px black;
+          box-shadow: -2px 2px 15px -5px black;
+  cursor: pointer;
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+  z-index: 999;
+}
+
+@media screen and (orientation: portrait) {
+  .wrapper #goUp-button {
+    width: 4vmax;
+    height: 4vmax;
+    bottom: 4vmax;
+    right: 3vmax;
+  }
+}
+
+.wrapper #goUp-button:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.wrapper #goUp-button img {
+  width: 60%;
+  height: 60%;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .counter-wrapper {
@@ -157,19 +262,34 @@ body {
   padding: 2vmax 0;
 }
 
+@media screen and (orientation: portrait) {
+  .counter-wrapper {
+    padding: unset;
+  }
+}
+
 .counter-wrapper .counter-content {
   width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
   padding: 1.5vmax 0;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background-color: #27AE60;
   border-radius: 30px;
+}
+
+@media screen and (orientation: portrait) {
+  .counter-wrapper .counter-content {
+    width: 100%;
+    border-radius: unset;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    row-gap: 5vmax;
+    padding: 4vmax 0;
+  }
 }
 
 .counter-wrapper .counter-content .counter-box {
@@ -194,10 +314,22 @@ body {
   font-weight: 400;
 }
 
+@media screen and (orientation: portrait) {
+  .counter-wrapper .counter-content .counter-box h3 {
+    font-size: 3vmax;
+  }
+}
+
 .counter-wrapper .counter-content .counter-box h4 {
   font-size: 1vmax;
   font-weight: 400;
   margin-top: 0.5vmax;
+}
+
+@media screen and (orientation: portrait) {
+  .counter-wrapper .counter-content .counter-box h4 {
+    font-size: 2.5vmax;
+  }
 }
 
 .counter-wrapper .counter-content .box-spacer::after {
@@ -208,6 +340,12 @@ body {
   width: 3px;
   height: 3vmax;
   background-color: #fafafa;
+}
+
+@media screen and (orientation: portrait) {
+  .counter-wrapper .counter-content .box-spacer::after {
+    display: none;
+  }
 }
 
 .information1-wrapper {
@@ -224,8 +362,30 @@ body {
       justify-content: space-around;
 }
 
+@media screen and (orientation: portrait) {
+  .information1-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10vmax 0 0 0;
+  }
+}
+
 .information1-wrapper .information1-content {
   width: 30%;
+}
+
+@media screen and (orientation: portrait) {
+  .information1-wrapper .information1-content {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information1-wrapper .information1-content {
+    width: 85%;
+  }
 }
 
 .information1-wrapper .information1-content h2 {
@@ -234,6 +394,18 @@ body {
   text-align: center;
   position: relative;
   z-index: 1;
+}
+
+@media screen and (orientation: portrait) {
+  .information1-wrapper .information1-content h2 {
+    font-size: 3.5vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information1-wrapper .information1-content h2 {
+    font-size: 3vmax;
+  }
 }
 
 .information1-wrapper .information1-content h2::before {
@@ -248,10 +420,38 @@ body {
   background-color: #27AE60;
 }
 
+@media screen and (orientation: portrait) {
+  .information1-wrapper .information1-content h2::before {
+    width: 30%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information1-wrapper .information1-content h2::before {
+    width: 20%;
+    margin-left: 2vmax;
+    bottom: 4%;
+  }
+}
+
 .information1-wrapper .information1-content p {
   margin-top: 3vmax;
   font-size: 1.2vmax;
   text-align: center;
+}
+
+@media screen and (orientation: portrait) {
+  .information1-wrapper .information1-content p {
+    font-size: 2.2vmax;
+    margin-top: 6vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information1-wrapper .information1-content p {
+    font-size: 1.9vmax;
+  }
 }
 
 .information1-wrapper .information1-content a {
@@ -267,6 +467,15 @@ body {
   position: relative;
 }
 
+@media screen and (orientation: portrait) {
+  .information1-wrapper .information1-picture {
+    width: 100%;
+    margin-top: 6vmax;
+    margin-bottom: 0;
+    background-attachment: fixed;
+  }
+}
+
 .information1-wrapper .information1-picture::before {
   content: '';
   position: absolute;
@@ -276,6 +485,12 @@ body {
   width: 75%;
   height: 1vmax;
   background-color: #27AE60;
+}
+
+@media screen and (orientation: portrait) {
+  .information1-wrapper .information1-picture::before {
+    width: 100%;
+  }
 }
 
 .information1-wrapper .information1-picture::after {
@@ -305,9 +520,29 @@ body {
       justify-content: space-around;
 }
 
+@media screen and (orientation: portrait) {
+  .information2-wrapper {
+    background-image: unset;
+    background-color: #fafafa;
+  }
+}
+
 .information2-wrapper .information2-content {
   width: 30%;
   margin-right: -35%;
+}
+
+@media screen and (orientation: portrait) {
+  .information2-wrapper .information2-content {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information2-wrapper .information2-content {
+    width: 85%;
+  }
 }
 
 .information2-wrapper .information2-content h2 {
@@ -316,6 +551,18 @@ body {
   text-align: center;
   position: relative;
   z-index: 1;
+}
+
+@media screen and (orientation: portrait) {
+  .information2-wrapper .information2-content h2 {
+    font-size: 3.5vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information2-wrapper .information2-content h2 {
+    font-size: 3vmax;
+  }
 }
 
 .information2-wrapper .information2-content h2::before {
@@ -331,10 +578,38 @@ body {
   background-color: #27AE60;
 }
 
+@media screen and (orientation: portrait) {
+  .information2-wrapper .information2-content h2::before {
+    width: 30%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information2-wrapper .information2-content h2::before {
+    width: 20%;
+    margin-right: 2vmax;
+    bottom: 4%;
+  }
+}
+
 .information2-wrapper .information2-content p {
   margin-top: 3vmax;
   font-size: 1.2vmax;
   text-align: center;
+}
+
+@media screen and (orientation: portrait) {
+  .information2-wrapper .information2-content p {
+    font-size: 2.2vmax;
+    margin-top: 6vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information2-wrapper .information2-content p {
+    font-size: 1.9vmax;
+  }
 }
 
 .information2-wrapper .information2-content a {
@@ -355,15 +630,55 @@ body {
       justify-content: space-around;
 }
 
+@media screen and (orientation: portrait) {
+  .information3-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information3-wrapper {
+    padding: 5vmax 0;
+  }
+}
+
 .information3-wrapper .information3-text {
-  width: 25%;
+  width: 30%;
   margin-left: 5%;
   color: #fafafa;
+}
+
+@media screen and (orientation: portrait) {
+  .information3-wrapper .information3-text {
+    width: 75%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information3-wrapper .information3-text {
+    width: 90%;
+  }
 }
 
 .information3-wrapper .information3-text h2 {
   font-size: 2.2vmax;
   text-align: center;
+}
+
+@media screen and (orientation: portrait) {
+  .information3-wrapper .information3-text h2 {
+    font-size: 3.5vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information3-wrapper .information3-text h2 {
+    font-size: 3vmax;
+  }
 }
 
 .information3-wrapper .information3-text p {
@@ -372,10 +687,52 @@ body {
   text-align: center;
 }
 
-.information3-wrapper .information3-box {
+@media screen and (orientation: portrait) {
+  .information3-wrapper .information3-text p {
+    font-size: 2.2vmax;
+    margin-top: 4vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information3-wrapper .information3-text p {
+    font-size: 1.9vmax;
+  }
+}
+
+.information3-wrapper .information3-box-container {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media screen and (orientation: portrait) {
+  .information3-wrapper .information3-box-container {
+    width: 90%;
+    margin-top: 6vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information3-wrapper .information3-box-container {
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.information3-wrapper .information3-box-container .information3-box {
   background-color: #fafafa;
   padding: 2vmax;
-  width: 15%;
+  width: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,20 +748,51 @@ body {
           justify-content: center;
 }
 
-.information3-wrapper .information3-box .information3-box-icon {
-  width: 5vmax;
-  height: 5vmax;
-  background-color: aquamarine;
+@media screen and (max-width: 500px) {
+  .information3-wrapper .information3-box-container .information3-box {
+    padding: 2vmax 1vmax 2vmax 1vmax;
+    width: 90%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 2vmax;
+    border-radius: 0;
+  }
 }
 
-.information3-wrapper .information3-box p {
+.information3-wrapper .information3-box-container .information3-box .information3-box-icon {
+  width: 5vmax;
+  height: 5vmax;
+  background-color: gray;
+}
+
+@media screen and (orientation: portrait) {
+  .information3-wrapper .information3-box-container .information3-box .information3-box-icon {
+    width: 10vmax;
+    height: 10vmax;
+  }
+}
+
+.information3-wrapper .information3-box-container .information3-box p {
   margin-top: 1vmax;
   font-size: 1.1vmax;
   text-align: center;
 }
 
-.information3-wrapper .box2 {
-  margin-right: 5%;
+@media screen and (orientation: portrait) {
+  .information3-wrapper .information3-box-container .information3-box p {
+    font-size: 1.8vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information3-wrapper .information3-box-container .information3-box p {
+    width: 60%;
+    font-size: 1.5vmax;
+  }
 }
 
 .ourTeam-wrapper {
@@ -434,6 +822,18 @@ body {
   z-index: 2;
 }
 
+@media screen and (orientation: portrait) {
+  .ourTeam-wrapper .OurTeam-wrapper-title {
+    font-size: 3.5vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ourTeam-wrapper .OurTeam-wrapper-title {
+    font-size: 3vmax;
+  }
+}
+
 .ourTeam-wrapper .OurTeam-wrapper-title::before {
   content: '';
   display: block;
@@ -444,6 +844,13 @@ body {
   z-index: -1;
   margin-left: -1.5vmax;
   background-color: #27AE60;
+}
+
+@media screen and (max-width: 500px) {
+  .ourTeam-wrapper .OurTeam-wrapper-title::before {
+    width: 45%;
+    bottom: 4%;
+  }
 }
 
 .ourTeam-wrapper .ourTeam-container {
@@ -458,6 +865,20 @@ body {
   row-gap: 5%;
 }
 
+@media screen and (orientation: portrait) {
+  .ourTeam-wrapper .ourTeam-container {
+    width: 90%;
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ourTeam-wrapper .ourTeam-container {
+    width: 100%;
+  }
+}
+
 .ourTeam-wrapper .ourTeam-container .ourTeam-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -470,11 +891,34 @@ body {
   padding: 2vmax;
 }
 
+@media screen and (orientation: portrait) {
+  .ourTeam-wrapper .ourTeam-container .ourTeam-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ourTeam-wrapper .ourTeam-container .ourTeam-box {
+    padding: 1vmax;
+  }
+}
+
 .ourTeam-wrapper .ourTeam-container .ourTeam-box .ourTeam-photo {
   width: 8vmax;
   height: 8vmax;
   border-radius: 50%;
   background-color: gray;
+}
+
+@media screen and (orientation: portrait) {
+  .ourTeam-wrapper .ourTeam-container .ourTeam-box .ourTeam-photo {
+    width: 10vmax;
+    height: 10vmax;
+  }
 }
 
 .ourTeam-wrapper .ourTeam-container .ourTeam-box .ourTeam-text {
@@ -494,15 +938,44 @@ body {
           justify-content: flex-start;
 }
 
+@media screen and (orientation: portrait) {
+  .ourTeam-wrapper .ourTeam-container .ourTeam-box .ourTeam-text {
+    width: 75%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 2vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .ourTeam-wrapper .ourTeam-container .ourTeam-box .ourTeam-text {
+    width: 90%;
+  }
+}
+
 .ourTeam-wrapper .ourTeam-container .ourTeam-box .ourTeam-text h2 {
   font-size: 1.4vmax;
   color: #27AE60;
   margin: 0;
 }
 
+@media screen and (orientation: portrait) {
+  .ourTeam-wrapper .ourTeam-container .ourTeam-box .ourTeam-text h2 {
+    font-size: 2.2vmax;
+    text-align: center;
+  }
+}
+
 .ourTeam-wrapper .ourTeam-container .ourTeam-box .ourTeam-text p {
   font-size: 0.9vmax;
   margin-top: 0.5vmax;
+}
+
+@media screen and (orientation: portrait) {
+  .ourTeam-wrapper .ourTeam-container .ourTeam-box .ourTeam-text p {
+    font-size: 1.4vmax;
+  }
 }
 
 .information4-wrapper {
@@ -511,6 +984,12 @@ body {
   background-image: url(../assets/images/aboutbg3.jpg);
   background-position: center;
   background-size: cover;
+}
+
+@media screen and (orientation: portrait) {
+  .information4-wrapper {
+    height: unset;
+  }
 }
 
 .information4-wrapper .information4-container {
@@ -532,10 +1011,35 @@ body {
           justify-content: center;
 }
 
+@media screen and (orientation: portrait) {
+  .information4-wrapper .information4-container {
+    width: 100%;
+    padding: 10vmax 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information4-wrapper .information4-container {
+    padding: 5vmax 0;
+  }
+}
+
 .information4-wrapper .information4-container h2 {
   font-size: 2.2vmax;
   font-weight: 500;
   color: #fafafa;
+}
+
+@media screen and (orientation: portrait) {
+  .information4-wrapper .information4-container h2 {
+    font-size: 3.5vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information4-wrapper .information4-container h2 {
+    font-size: 3vmax;
+  }
 }
 
 .information4-wrapper .information4-container p {
@@ -544,6 +1048,20 @@ body {
   margin-top: 3vmax;
   text-align: center;
   color: #fafafa;
+}
+
+@media screen and (orientation: portrait) {
+  .information4-wrapper .information4-container p {
+    font-size: 2vmax;
+    width: 90%;
+    margin-top: 6vmax;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .information4-wrapper .information4-container p {
+    font-size: 1.7vmax;
+  }
 }
 
 footer {
@@ -562,5 +1080,12 @@ footer {
 
 footer p {
   color: #fafafa;
+  font-size: 0.7vmax;
+}
+
+@media screen and (orientation: portrait) {
+  footer p {
+    font-size: 1vmax;
+  }
 }
 /*# sourceMappingURL=about.css.map */

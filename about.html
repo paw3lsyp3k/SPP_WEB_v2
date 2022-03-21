@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
     <div class="wrapper">
         <a href="./index.html" class="goBackButton">
             <div class="goBackIcon"></div>
@@ -22,7 +26,11 @@
             Lorem ipsum dolor sit amet <a>consectetur</a> adipisicing elit. Iure nihil minus repudiandae, repellat rerum nemo fugiat et <a>harum</a>, a facilis repellendus quia cupiditate libero possimus.<br><br>
             Lorem ipsum dolor sit amet <a>consectetur</a> adipisicing elit. Aut quia facere corporis et magnam voluptatibus?
             </p>
-            <div class="goDownIcon"></div>
+            <div class="goDownIcon scroll"></div>
+        </div>
+        <div class="scroll" id="trigger1"></div>
+        <div id="goUp-button">
+            <img src="./assets/icons/arrow-icon.svg" alt="">
         </div>
     </div>
     <div class="counter-wrapper">
@@ -63,13 +71,15 @@
             <h2>Lorem ipsum sit</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ea voluptates error commodi quas perferendis obcaecati impedit cumque. Voluptas exercitationem ratione voluptatibus iusto nemo cum perspiciatis vero, aperiam alias excepturi officia deleniti. Magni labore id fuga temporibus et necessitatibus laboriosam in est hic dolorem beatae veniam quis, accusamus sit velit asperiores perferendis quidem omnis! Nihil!</p>
         </div>
-        <div class="information3-box">
-            <div class="information3-box-icon"></div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, voluptatem! Cumque aliquam reprehenderit facere in!</p>
-        </div>
-        <div class="information3-box box2">
-            <div class="information3-box-icon "></div>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, voluptatem! Cumque aliquam reprehenderit facere in!</p>
+        <div class="information3-box-container">
+            <div class="information3-box">
+                <div class="information3-box-icon"></div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, voluptatem! Cumque aliquam reprehenderit facere in!</p>
+            </div>
+            <div class="information3-box box2">
+                <div class="information3-box-icon "></div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, voluptatem! Cumque aliquam reprehenderit facere in!</p>
+            </div>
         </div>
     </div>
     <div class="ourTeam-wrapper">
@@ -146,5 +156,19 @@
     <footer>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, hic!</p>
     </footer>
+    <script src="./js/app.js"></script>
+    <script type="module" >
+        import jump from './node_modules/jump.js/dist/jump.module.js';
+    
+        var button1 = document.querySelector('.scroll');
+        button1.addEventListener('click', () => {
+            jump('.information1-wrapper')
+        })
+    
+        var button2 = document.querySelector('#goUp-button');
+            button2.addEventListener('click', () => {
+                jump('.wrapper')
+            })
+    </script>
 </body>
 </html>

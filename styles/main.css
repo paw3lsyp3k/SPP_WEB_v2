@@ -1164,6 +1164,12 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item {
+    padding: 1vmax 2vmax;
+  }
+}
+
 .about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-item-section {
   width: 100%;
   display: -webkit-box;
@@ -1175,6 +1181,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 500px) {
+  .about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-item-section {
+    padding: 1vmax 0;
+  }
 }
 
 .about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-item-section h3 {
@@ -1218,6 +1230,13 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-item-section .dropdown-icon {
+    width: 2vmax;
+    height: 2vmax;
+  }
+}
+
 .about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-description {
   width: 100%;
   height: 0;
@@ -1248,8 +1267,15 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .about-colaboration-wrapper .colaboration-content .colaboration-dropdown .dropdown-item .dropdown-description p {
+    font-size: 1.8vmax;
+  }
+}
+
 .about-colaboration-wrapper .colaboration-content .colaboration-dropdown .active .dropdown-item-section {
   border-bottom: 2px solid #27AE60;
+  padding: 1vmax 0;
 }
 
 .about-colaboration-wrapper .colaboration-content .colaboration-dropdown .active .dropdown-icon {
@@ -1369,6 +1395,12 @@ body {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .portfolio-wrapper .portfolio-container {
+    width: 85%;
+  }
+}
+
 .portfolio-wrapper .portfolio-container .portfolio-item {
   width: 100%;
   background-color: #fafafa;
@@ -1386,6 +1418,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    border-radius: 0;
   }
 }
 
@@ -1439,6 +1472,7 @@ body {
 @media screen and (max-width: 500px) {
   .portfolio-wrapper .portfolio-container .portfolio-item .portfolio-content h3 {
     font-size: 2.5vmax;
+    margin-top: 3vmax;
   }
 }
 
@@ -1459,7 +1493,7 @@ body {
 @media screen and (max-width: 500px) {
   .portfolio-wrapper .portfolio-container .portfolio-item .portfolio-content p {
     font-size: 1.8vmax;
-    margin-top: 2vmax;
+    margin-top: -1vmax;
   }
 }
 
@@ -1484,10 +1518,11 @@ body {
 
 @media screen and (max-width: 500px) {
   .portfolio-wrapper .portfolio-container .portfolio-item .portfolio-content .portfolio-content-button {
-    font-size: 1.8vmax;
-    padding: 1vmax 0;
-    margin-top: 2vmax;
+    font-size: 2vmax;
+    padding: 1.5vmax 0;
+    margin-top: 1vmax;
     border-bottom-right-radius: 20px;
+    border-radius: 0;
   }
 }
 
@@ -1504,7 +1539,7 @@ body {
 @media screen and (max-width: 500px) {
   .portfolio-wrapper .portfolio-container .portfolio-item .portfolio-photo {
     width: 100%;
-    height: 15vmax;
+    height: 25vmax;
     left: 0;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;

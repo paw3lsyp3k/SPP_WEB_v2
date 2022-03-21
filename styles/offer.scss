@@ -22,6 +22,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media screen and ( orientation: portrait) {
+        height: unset;
+        padding: 20% 0;
+        justify-content: center;
+    }
     .goBackButton{
         position: absolute;
         top: 2vmax;
@@ -150,25 +155,22 @@ body{
         }
     }
     .scroll{
-        position: absolute;
-        bottom: 4vmax;
         width: 2vmax;
         height: 2vmax;
+        margin-top: 4vmax;
         background-image: url(../assets/icons/scroll-icon.svg);
         background-position: center;
         background-size: cover;
+        background-repeat: no-repeat;
         cursor: pointer;
-        transition: 350ms ease;
+        transition: 250ms ease;
         @media screen and ( orientation: portrait) {
             width: 4vmax;
             height: 4vmax;
-            bottom: 10vmax;
+            margin-top: 8vmax;
         }
         &:hover{
-            bottom: 4.5vmax;
-            @media screen and ( orientation: portrait) {
-                bottom: 11vmax;
-            }
+            filter: invert(48%) sepia(95%) saturate(370%) hue-rotate(93deg) brightness(95%) contrast(86%);;
         }
     }
     #goUp-button{
@@ -327,41 +329,39 @@ body{
                 font-size: 4vmax;
             }
         }
-        ul{
-            margin-top: 4vmax;
-            list-style: none; 
+        .description1-list{
+            width: 90%;
+            margin-top: 3vmax;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
             @media screen and ( orientation: portrait) {
+                margin: 3vmax auto;
                 width: 80%;
-                margin: 6vmax auto 0 auto;
             }
-            @media screen and ( max-width: 500px) {
-                width: 70%;
-            }
-            
-        } li{
-            margin-top: 1.2vmax;
-            font-size: 1.2vmax;
-            @media screen and ( orientation: portrait) {
-                font-size: 2vmax;
-                text-align: left;
-                line-height: 3vmax;
-                margin-top: 2vmax;
-            }
-            @media screen and ( max-width: 500px) {
-                text-align: center;
-             }
-            &::before {
-                content: "\2022"; 
-                color: $main-color;
-                font-weight: bold; 
-                display: inline-block;
-                width: 1vmax; 
-                margin-left: -1em; 
-                margin-right: 1vmax;
-                @media screen and ( max-width: 500px) {
-                    font-size: 3vmax;
+            .description1-list-item{
+                margin: 0.25vmax 0;
+                padding: 0.5vmax 0 0.5vmax 1vmax;
+                font-size: 1vmax;
+                position: relative;
+                @media screen and ( orientation: portrait) {
+                    font-size: 2vmax;
+                    margin: 1vmax 0;
+                    text-align: center;
                 }
-              }
+                &::before{
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 30%;
+                    width: 4px;
+                    height: 40%;
+                    background-color: $main-color;
+                   
+                }
+            }
         }
     }
     
@@ -417,8 +417,7 @@ body{
 
 .pricing-wrapper {
     width: 100%;
-    padding: 10% 0 5% 0;
-    background-color:$white;
+    padding: 10% 0 10% 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -443,6 +442,9 @@ body{
             width: 60%;
             display: flex;
             flex-direction: column;
+        }
+        @media screen and ( max-width: 500px) {
+            width: 90%;
         }
         .pricing-item{
             width: 100%;
@@ -507,6 +509,9 @@ body{
                         padding: 1vmax 0;
                         margin: 3vmax 0;
                     }
+                    @media screen and ( max-width: 500px) {
+                        margin: 1.5vmax 0;
+                    }
                 }
             }
             .pricing-number{
@@ -515,6 +520,9 @@ body{
                 @media screen and ( orientation: portrait) {
                     margin-top: 6vmax;
                     font-size: 3.5vmax;
+                }
+                @media screen and ( max-width: 500px) {
+                    margin-top: 4vmax;
                 }
             }
         }
@@ -597,7 +605,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 3vmax;
+    padding-bottom: 0;
     height: 0;
     transform:scaleY(0);
     transform-origin:top;
@@ -769,6 +777,7 @@ body{
         height: auto;
         transform:scaleY(1);
         transition: 100ms ease;
+        padding-bottom: 3vmax;
     }
 }
 
