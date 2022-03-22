@@ -470,6 +470,7 @@ body {
 @media screen and (orientation: portrait) {
   .information1-wrapper .information1-picture {
     width: 100%;
+    height: 30vmax;
     margin-top: 6vmax;
     margin-bottom: 0;
   }
