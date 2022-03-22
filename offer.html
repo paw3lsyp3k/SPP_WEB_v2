@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPP_WEB | Marketing w internecie</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>SPP_WEB | Oferta</title>
     <link rel="stylesheet" href="./styles/offer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 
+        Loading necessary scripts to use ScrollMagic
+    -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
-   <div class="landing-wrapper">
+   <!-- 
+        Landing wrapper // st to see
+    -->
+    <div class="landing-wrapper">
     <a href="./index.html" class="goBackButton">
         <div class="goBackIcon"></div>
         <p>Strona Główna</p>
@@ -28,6 +34,9 @@
             <img src="./assets/icons/arrow-icon.svg" alt="">
         </div>
    </div>
+   <!-- 
+        Why we stand out section
+    -->
    <div class="standOut-wrapper">
     <div class="boxes">
         <div class="standOut-box">
@@ -69,6 +78,9 @@
         </div>
     </div>
 </div>
+<!-- 
+        Container with place for the list of some things
+    -->
 <div class="description1-wrapper">
     <div class="description1-image"></div>
     <div class="description1-content">
@@ -95,15 +107,21 @@
         </div>
     </div>
 </div>
-<div class="information-wrapper">
-    <div class="information-content">
+<!-- 
+        Container with place for some text
+    -->
+<div class="description2-wrapper">
+    <div class="description2-content">
         <h2>Lorem ipsum dolor sit.</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, fugiat incidunt quam illum quisquam facere exercitationem! Perspiciatis, nulla aspernatur nisi tempore incidunt, asperiores facilis odit voluptas fugit mollitia doloribus consectetur.<br><br>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem reiciendis sequi cum enim tenetur quaerat aspernatur aliquid incidunt non inventore!<br><br>
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi quaerat sint voluptates, iure quia quis culpa, magni enim temporibus quidem quas delectus distinctio cum nulla vel consequuntur, aliquid accusantium. Obcaecati incidunt saepe doloribus ea. Architecto excepturi rem corrupti quas incidunt.</p>
     </div>
-    <div class="information-image"></div>
+    <div class="description2-image"></div>
 </div>
+<!-- 
+        Information about our types of product
+    -->
 <div class="pricing-wrapper">
     <h2> Lorem ipsum dolor sit. </h2>
     <div class="pricing-container">
@@ -159,10 +177,16 @@
             <div class="pricing-number">1399 zł</div>
         </div>
     </div>
+    <!-- 
+        Button for showing contact section
+    -->
     <div class="websites-button" onclick='showContactButton()'>
         <p>Zainteresowany? Napisz do nas!</p>
     </div>
 </div>
+<!-- 
+        Contact section which shows when the button clicks
+    -->
 <div class="contact-wrapper">
     <div class="contact-title">
         Skontaktuj się z nami!
@@ -211,10 +235,19 @@
         </div>
     </div>
 </div>
-<div class="footer">
+<!-- 
+        Footer
+    -->
+<footer>
     Website created by SPP_WEB. All right reserved
-</div>
+</footer>
+<!-- 
+       Linking app.js file
+    -->
 <script src="./js/app.js"></script>
+<!-- 
+       Adding necessary scripts to run jump.js 
+    -->
 <script type="module" >
     import jump from './node_modules/jump.js/dist/jump.module.js';
 

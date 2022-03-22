@@ -537,7 +537,7 @@ body {
   background-color: #27AE60;
 }
 
-.information-wrapper {
+.description2-wrapper {
   width: 100%;
   background-color: #27AE60;
   display: -webkit-box;
@@ -553,7 +553,7 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .information-wrapper {
+  .description2-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -561,36 +561,36 @@ body {
   }
 }
 
-.information-wrapper .information-content {
+.description2-wrapper .description2-content {
   width: 40%;
 }
 
 @media screen and (orientation: portrait) {
-  .information-wrapper .information-content {
+  .description2-wrapper .description2-content {
     width: 80%;
     text-align: center;
   }
 }
 
-.information-wrapper .information-content h2 {
+.description2-wrapper .description2-content h2 {
   font-weight: 600;
   font-size: 2.6vmax;
 }
 
 @media screen and (orientation: portrait) {
-  .information-wrapper .information-content h2 {
+  .description2-wrapper .description2-content h2 {
     font-size: 4vmax;
   }
 }
 
-.information-wrapper .information-content p {
+.description2-wrapper .description2-content p {
   margin-top: 4vmax;
   font-weight: 500;
   font-size: 1vmax;
 }
 
 @media screen and (orientation: portrait) {
-  .information-wrapper .information-content p {
+  .description2-wrapper .description2-content p {
     width: 90%;
     margin: 6vmax auto;
     font-size: 2vmax;
@@ -598,7 +598,7 @@ body {
   }
 }
 
-.information-wrapper .information-image {
+.description2-wrapper .description2-image {
   width: 30vmax;
   height: 30vmax;
   background-image: url(../assets/icons/ilustration2.svg);
@@ -607,7 +607,7 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .information-wrapper .information-image {
+  .description2-wrapper .description2-image {
     width: 100%;
   }
 }
@@ -1207,7 +1207,7 @@ body {
   padding-bottom: 3vmax;
 }
 
-.footer {
+footer {
   width: 100%;
   padding: 0.5vmax 0;
   color: #fafafa;
@@ -1218,7 +1218,7 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .footer {
+  footer {
     font-size: 1.2vmax;
     padding: 1vmax 0;
   }

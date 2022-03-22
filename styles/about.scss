@@ -14,7 +14,7 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
-.wrapper{
+.landing-wrapper{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -309,7 +309,6 @@ body{
             width: 100%;
             margin-top: 6vmax;
             margin-bottom: 0;
-            background-attachment: fixed;
         }
 
         &::before{
@@ -323,6 +322,9 @@ body{
             background-color: $main-color;
             @media screen and ( orientation: portrait) {
                 width: 100%;
+                bottom: 0;
+                height: 4px;
+                left: 0;
             }
         }
         &::after{
@@ -334,6 +336,13 @@ body{
             width: 1vmax;
             height: 75%;
             background-color: $main-color;
+            @media screen and ( orientation: portrait) {
+                width: 100%;
+                left: 0;
+                top: 0;
+                height: 4px;
+                
+            }
         }
     }
 }

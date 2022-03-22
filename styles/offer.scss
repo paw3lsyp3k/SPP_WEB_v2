@@ -367,7 +367,7 @@ body{
     
 }
 
-.information-wrapper{
+.description2-wrapper{
     width: 100%;
     background-color: $main-color;
     display: flex;
@@ -378,7 +378,7 @@ body{
     @media screen and ( orientation: portrait) {
         flex-direction: column;
     }
-    .information-content{
+    .description2-content{
         width: 40%;
         @media screen and ( orientation: portrait) {
            width: 80%;
@@ -403,7 +403,7 @@ body{
             }
         }
     }
-    .information-image{
+    .description2-image{
         width: 30vmax;
         height: 30vmax;
         background-image: url(../assets/icons/ilustration2.svg);
@@ -782,7 +782,7 @@ body{
 }
 
 
-.footer{
+footer{
     width: 100%;
     padding: 0.5vmax 0;
     color: $white;

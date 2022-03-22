@@ -11,7 +11,7 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.wrapper {
+.landing-wrapper {
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -29,7 +29,7 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .wrapper {
+  .landing-wrapper {
     background-image: url(../assets/images/photo3mob.jpg);
     height: unset;
     padding: 25% 0;
@@ -39,7 +39,7 @@ body {
   }
 }
 
-.wrapper .goBackButton {
+.landing-wrapper .goBackButton {
   position: absolute;
   top: 2vmax;
   left: 0;
@@ -63,7 +63,7 @@ body {
   transition: 250ms ease;
 }
 
-.wrapper .goBackButton .goBackIcon {
+.landing-wrapper .goBackButton .goBackIcon {
   width: 1.5vmax;
   height: 1.5vmax;
   -webkit-transform: rotate(90deg);
@@ -78,7 +78,7 @@ body {
   transition: 250ms ease;
 }
 
-.wrapper .goBackButton p {
+.landing-wrapper .goBackButton p {
   margin-left: 1vmax;
   font-size: 1.2vmax;
   color: #fafafa;
@@ -88,26 +88,26 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .wrapper .goBackButton p {
+  .landing-wrapper .goBackButton p {
     font-size: 2vmax;
     margin-left: 2vmax;
   }
 }
 
-.wrapper .goBackButton:hover {
+.landing-wrapper .goBackButton:hover {
   background-color: #27AE60;
   border: 2px solid #27AE60;
 }
 
-.wrapper .goBackButton:hover p {
+.landing-wrapper .goBackButton:hover p {
   margin-left: 1.5vmax;
 }
 
-.wrapper .goBackButton:hover .goBackIcon {
+.landing-wrapper .goBackButton:hover .goBackIcon {
   margin-left: 1vmax;
 }
 
-.wrapper .wrapper-content {
+.landing-wrapper .wrapper-content {
   width: 35%;
   margin-right: 15%;
   text-align: center;
@@ -124,54 +124,54 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .wrapper .wrapper-content {
+  .landing-wrapper .wrapper-content {
     width: 80%;
     margin: auto;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .wrapper .wrapper-content {
+  .landing-wrapper .wrapper-content {
     width: 90%;
   }
 }
 
-.wrapper .wrapper-content h2 {
+.landing-wrapper .wrapper-content h2 {
   font-size: 2.4vmax;
 }
 
 @media screen and (orientation: portrait) {
-  .wrapper .wrapper-content h2 {
+  .landing-wrapper .wrapper-content h2 {
     font-size: 4.5vmax;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .wrapper .wrapper-content h2 {
+  .landing-wrapper .wrapper-content h2 {
     font-size: 3.5vmax;
   }
 }
 
-.wrapper .wrapper-content p {
+.landing-wrapper .wrapper-content p {
   margin-top: 3vmax;
   font-size: 1.2vmax;
 }
 
 @media screen and (orientation: portrait) {
-  .wrapper .wrapper-content p {
+  .landing-wrapper .wrapper-content p {
     margin-top: 5vmax;
     font-size: 2.2vmax;
   }
 }
 
 @media screen and (max-width: 500px) {
-  .wrapper .wrapper-content p {
+  .landing-wrapper .wrapper-content p {
     margin-top: 3vmax;
     font-size: 2vmax;
   }
 }
 
-.wrapper .wrapper-content .goDownIcon {
+.landing-wrapper .wrapper-content .goDownIcon {
   width: 2vmax;
   height: 2vmax;
   margin-top: 4vmax;
@@ -185,23 +185,23 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .wrapper .wrapper-content .goDownIcon {
+  .landing-wrapper .wrapper-content .goDownIcon {
     width: 4vmax;
     height: 4vmax;
     margin-top: 8vmax;
   }
 }
 
-.wrapper .wrapper-content .goDownIcon:hover {
+.landing-wrapper .wrapper-content .goDownIcon:hover {
   -webkit-filter: invert(48%) sepia(95%) saturate(370%) hue-rotate(93deg) brightness(95%) contrast(86%);
           filter: invert(48%) sepia(95%) saturate(370%) hue-rotate(93deg) brightness(95%) contrast(86%);
 }
 
-.wrapper .wrapper-content a {
+.landing-wrapper .wrapper-content a {
   color: #27AE60;
 }
 
-.wrapper #goUp-button {
+.landing-wrapper #goUp-button {
   width: 2vmax;
   height: 2vmax;
   background-color: #fafafa;
@@ -228,7 +228,7 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .wrapper #goUp-button {
+  .landing-wrapper #goUp-button {
     width: 4vmax;
     height: 4vmax;
     bottom: 4vmax;
@@ -236,12 +236,12 @@ body {
   }
 }
 
-.wrapper #goUp-button:hover {
+.landing-wrapper #goUp-button:hover {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }
 
-.wrapper #goUp-button img {
+.landing-wrapper #goUp-button img {
   width: 60%;
   height: 60%;
   -webkit-transform: rotate(180deg);
@@ -472,7 +472,6 @@ body {
     width: 100%;
     margin-top: 6vmax;
     margin-bottom: 0;
-    background-attachment: fixed;
   }
 }
 
@@ -490,6 +489,9 @@ body {
 @media screen and (orientation: portrait) {
   .information1-wrapper .information1-picture::before {
     width: 100%;
+    bottom: 0;
+    height: 4px;
+    left: 0;
   }
 }
 
@@ -502,6 +504,15 @@ body {
   width: 1vmax;
   height: 75%;
   background-color: #27AE60;
+}
+
+@media screen and (orientation: portrait) {
+  .information1-wrapper .information1-picture::after {
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 4px;
+  }
 }
 
 .information2-wrapper {

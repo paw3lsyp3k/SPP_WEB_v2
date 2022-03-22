@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <title>SPP_WEB | Marketing w internecie</title>
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,10 +11,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 
+        Loading necessary scripts to use ScrollMagic
+    -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+    <!-- 
+        Landing wrapper // st to see
+    -->
     <div class="landing-wrapper">
         <div class="navBar">
             <div class="navBarLogo">
@@ -47,24 +53,30 @@
             <img src="./assets/icons/arrow-icon.svg" alt="">
         </div>
     </div>
+    <!-- 
+        About me section
+    -->
     <div class="aboutMe-wrapper" >
         <div class="aboutMe-photo"></div>
         <div class="aboutMe-content">
             <h1>Kilka słów <a>o nas</a>...</h1><br><br>
-            <h3>Jesteśmy grupą młodych, jednak godnych zaufania ludzi. Kieruje nami chęć szerokopojętego rozwoju oraz  mierzenia się z wyzwaniami stawianymi przez Państwa projekty. <br><br>
+            <h3>Jesteśmy grupą młodych, jednak godnych zaufania ludzi. Kieruje nami chęć szerokopojętego <a>rozwoju</a> oraz  mierzenia się z <a>wyzwaniami</a> stawianymi przez Państwa projekty. <br><br>
 
-            Zdajemy sobie sprawę, jak dużą rolę w dzisiejszym świecie pełni internet i jak ważne jest to, aby nie zostać "w tyle".<br>
-            Mówi się, że biznes którego nie ma w internecie - nie istnieje.
+            Zdajemy sobie sprawę, jak dużą rolę w dzisiejszym świecie pełni <a>internet</a> i jak ważne jest to, aby nie zostać "w tyle".<br>
+            Mówi się, że biznes którego nie ma w internecie - <a>nie istnieje</a>.
             Ludzie coraz więcej czasu spędzają w sieci, i to właśnie tam będą szukać wszystkiego czego potrzebują. <br>
-            Ale... Czy znajdą Ciebie?<br><br>
+            Ale... <a>Czy znajdą Ciebie</a>?<br><br>
                 
             <p>Pomożemy ci przenieść Twój biznes do internetu.<br>
-            Bądź o krok przed konkurencją!</p></h3>
+            <a>Bądź o krok przed konkurencją</a>!</p></h3>
             <a href="about.html"><div class="aboutMe-content-button" >
                 <p>Zobacz więcej</p>
             </div></a>
         </div>
     </div>
+    <!-- 
+        Why we stand out section
+    -->
     <div class="standOut-wrapper">
         <div class="boxes">
             <div class="standOut-box">
@@ -105,6 +117,9 @@
             </div>
         </div>
     </div>
+    <!-- 
+        Information about websites offer
+    -->
     <div class="websites-wrapper">
         <div class="websites-text">
             <h2>Strony <a>internetowe</a>!</h2><br>
@@ -150,6 +165,9 @@
             </div>
         </div>
     </div>
+    <!-- 
+        Information about our future colab and how it's gonna be look like
+    -->
     <div class="about-colaboration-wrapper">
         <div class="colaboration-photo" id="mobile-photo"></div>
         <div class="colaboration-content">
@@ -219,6 +237,9 @@
         </div>
         <div class="colaboration-photo"></div>
     </div>
+    <!-- 
+       Our projects section
+    -->
     <div class="portfolio-wrapper">
         <h2>Oto kilka <a>naszych realizacji</a>!</h2>
         <div class="portfolio-container">
@@ -268,6 +289,9 @@
             </div>
         </div>
     </div>
+    <!-- 
+       Section where you can contact with us
+    -->
     <div class="contact-wrapper">
         <div class="contact-title">
             Skontaktuj się z nami!
@@ -316,10 +340,19 @@
             </div>
         </div>
     </div>
-    <div class="footer">
+    <!-- 
+       footer
+    -->
+    <footer>
         Website created by SPP_WEB. All right reserved
-    </div>
+    </footer>
+    <!-- 
+       Linking app.js file
+    -->
     <script src="./js/app.js"></script>
+    <!-- 
+       Adding necessary scripts to run jump.js 
+    -->
     <script type="module" >
         import jump from './node_modules/jump.js/dist/jump.module.js';
 

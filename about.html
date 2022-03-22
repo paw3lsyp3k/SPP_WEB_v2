@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SPP_WEB | Marketing w internecie</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>SPP_WEB | O nas</title>
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- 
+        Loading necessary scripts to use ScrollMagic
+    -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TimelineMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
-    <div class="wrapper">
+    <!-- 
+        Landing wrapper // st to see
+    -->
+    <div class="landing-wrapper">
         <a href="./index.html" class="goBackButton">
             <div class="goBackIcon"></div>
             <p>Strona Główna</p>
@@ -33,6 +39,9 @@
             <img src="./assets/icons/arrow-icon.svg" alt="">
         </div>
     </div>
+    <!-- 
+        Section with few of our stats
+    -->
     <div class="counter-wrapper">
         <div class="counter-content">
             <div class="counter-box box-spacer">
@@ -53,6 +62,9 @@
             </div>
         </div>
     </div>
+    <!-- 
+        Example section with text
+    -->
     <div class="information1-wrapper">
         <div class="information1-content">
             <h2>Lorem ipsum <a>dolor</a> sit</h2>
@@ -60,12 +72,18 @@
         </div>
         <div class="information1-picture"></div>
     </div>
+    <!-- 
+        Example section with text
+    -->
     <div class="information2-wrapper">
         <div class="information2-content">
             <h2>Lorem <a>ipsum</a> dolor sit</h2>
             <p>Fusce eget dui <a>dictum</a>, feugiat tortor venenatis, congue quam. <a>Quisque</a> metus sapien, consectetur sollicitudin malesuada in, egestas et eros. Donec pharetra arcu id purus <a>euismod</a>, quis rhoncus dui ultricies. Sed scelerisque, augue in lacinia iaculis, nunc nibh euismod magna, vel ullamcorper dolor magna ut elit. <a>Etiam</a> at felis eget dui laoreet aliquet nec at ante. Morbi maximus interdum faucibus. Donec <a>condimentum</a> commodo tempor</p>
         </div>
     </div>
+    <!-- 
+        Example section with text boxes
+    -->
     <div class="information3-wrapper">
         <div class="information3-text">
             <h2>Lorem ipsum sit</h2>
@@ -82,6 +100,9 @@
             </div>
         </div>
     </div>
+    <!-- 
+        Presentation of our team members with photo, name and short description 
+    -->
     <div class="ourTeam-wrapper">
         <h2 class="OurTeam-wrapper-title">Meet our team</h2>
         <div class="ourTeam-container">
@@ -141,6 +162,9 @@
             </div>
         </div>
     </div>
+    <!-- 
+        Example section with text boxes
+    -->
     <div class="information4-wrapper">
         <div class="information4-container">
             <h2>Lorem ipsum dolor sit.</h2>
@@ -153,21 +177,30 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum nemo commodi quos eveniet similique autem ducimus perferendis, repudiandae laudantium corporis pariatur nisi necessitatibus optio reprehenderit? Aliquam quaerat praesentium sit aut sunt molestias repellat asperiores debitis facere! Repellat laboriosam dolorem aut ea recusandae exercitationem molestiae accusantium? Laborum fugiat quis totam dolorem.</p>
         </div>
     </div>
+    <!-- 
+        Footer
+    -->
     <footer>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, hic!</p>
     </footer>
+    <!-- 
+       Linking app.js file
+    -->
     <script src="./js/app.js"></script>
+    <!-- 
+       Adding necessary scripts to run jump.js 
+    -->
     <script type="module" >
         import jump from './node_modules/jump.js/dist/jump.module.js';
     
         var button1 = document.querySelector('.scroll');
         button1.addEventListener('click', () => {
-            jump('.information1-wrapper')
+            jump('.counter-wrapper')
         })
     
         var button2 = document.querySelector('#goUp-button');
             button2.addEventListener('click', () => {
-                jump('.wrapper')
+                jump('.landing-wrapper')
             })
     </script>
 </body>

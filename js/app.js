@@ -11,7 +11,7 @@ const mobileMenu = () => {
     item.classList.toggle('item-active')
   })
 }
-
+/* Hiding menu after click one of elements */ 
 menuItems.forEach(item => {
   item.addEventListener('click', () => {
     mobileMenu();
@@ -40,7 +40,7 @@ function showContactButton() {
     
 }
 
-/* Animated go up button  */
+/* Animated go up button which appears on the right bottom side */
 
 var tl = new TimelineMax({ onUpdate: updatePercentage });
 const controller = new ScrollMagic.Controller();

@@ -462,11 +462,12 @@ body {
 @media screen and (orientation: portrait) {
   .aboutMe-wrapper .aboutMe-photo {
     width: 100%;
-    height: 40vmax;
+    height: 30vmax;
     border-radius: 0;
     background-position: top;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    border-top: 4px solid #27AE60;
+    border-bottom: 4px solid #27AE60;
   }
 }
 
@@ -1321,11 +1322,12 @@ body {
   .about-colaboration-wrapper #mobile-photo {
     display: block;
     width: 100%;
-    height: 40vmax;
+    height: 30vmax;
     border-radius: 0;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    border-top: 4px solid #27AE60;
+    border-bottom: 4px solid #27AE60;
   }
 }
 
@@ -1851,7 +1853,7 @@ body {
   background-color: #C13584;
 }
 
-.footer {
+footer {
   width: 100%;
   padding: 0.5vmax 0;
   color: #fafafa;
@@ -1862,7 +1864,7 @@ body {
 }
 
 @media screen and (orientation: portrait) {
-  .footer {
+  footer {
     font-size: 1.2vmax;
     padding: 1vmax 0;
   }
